@@ -1,0 +1,81 @@
+/* css styles */
+
+.spotlight-image {
+  flex: 1;
+}
+
+.profile-photo {
+  width: 280px;
+  border-radius: 12px;
+}
+
+.spotlight-text {
+  flex: 2;
+}
+
+.spotlight-text h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.spotlight-text p {
+  font-size: 1.5rem;
+  line-height: 1.6;
+}
+
+.spotlight-links {
+  margin-top: 25px;
+}
+
+.spotlight-links a {
+  margin-right: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  color: #2563eb;
+}
+
+.spotlight-links a:hover {
+  text-decoration: underline;
+}
+
+/* Spotlight layout */
+.spotlight-container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Image column */
+.spotlight-image img {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* Text column */
+.spotlight-text {
+  flex: 1;
+}
+
+/* Responsive: stack on small screens */
+@media (max-width: 768px) {
+  .spotlight-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+

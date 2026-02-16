@@ -1,0 +1,26 @@
+{
+  "index.qmd": {
+    "index.html": "15bc6b40"
+  },
+  "about.qmd": {
+    "about.html": "7e9742f5"
+  },
+  "publications.qmd": {
+    "publications.html": "279bcb1d"
+  },
+  "Curriculum Vitae.qmd": {
+    "Curriculum Vitae.html": "be2886d8"
+  },
+  "publications_working.qmd": {
+    "publications_working.html": "41ade9a7"
+  },
+  "contact.qmd": {
+    "contact.html": "242b0d1d"
+  },
+  "research.qmd": {
+    "research.html": "e4348603"
+  },
+  "curriculum vitae.qmd": {
+    "curriculum vitae.html": "5904e9d9"
+  }
+}

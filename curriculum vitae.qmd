@@ -1,0 +1,96 @@
+---
+title: "Curriculum Vitae"
+---
+
+[Download CV (PDF; Last Updated 02-2026)](files/Feldman_CV.pdf)
+
+## **Academic Appointments**
+
+::: {.card}
+::: card-body
+#### The Ohio State University (present)
+
+Postdoctoral scholar
+:::
+:::
+
+## Education
+
+::: {.card}
+::: card-body
+#### University of North Carolina at Chapel Hill (Dec 2025)
+
+PhD Psychology and Neuroscience, Formal concentration in Quantitative Psychology\
+Advisers: Kristen Lindquist, PhD; Keely Muscatell, PhD
+
+#### University of North Carolina at Chapel Hill (Dec 2021)
+
+MA Psychology and Neuroscience\
+Adviser: Kristen Lindquist, PhD
+
+#### Tufts University (May 2016)
+
+BA Psychology; BA Peace and Justice Studies w/concentration in Psychology of Conflict\
+Advisers: Sam Sommers, PhD; Dale Bryan
+:::
+:::
+
+## **Teaching Experience**
+
+::: {.card}
+::: card-body
+#### Social Psychology 
+
+- Instructor of Record (Fall 2022)
+- Teaching Assistant (Spring 2019, Spring 2022)
+
+#### Introduction to Psychology 
+
+- Teaching Assistant (Fall 2019, Fall 2020)
+:::
+:::
+
+## Relevant Coursework
+
+::: {.card}
+::: card-body
+
+::: columns
+
+::: {.column width="50%"}
+#### Methodological\
+ANOVA\
+Regression\
+Structural Equation Modeling\
+Factor Analysis\
+Multilevel Modeling\
+Time Series Analysis\
+Computational Psychology\
+Machine Learning\
+Functional MRI\
+Community Based Participatory Research\
+:::
+
+::: {.column width="50%"}
+#### Content\
+Methods of Social Psychology\
+Social and Affective Neuroscience\
+Advanced Seminar in Psychology of Emotions\
+Advanced Seminar in Positive Psychology\
+Advanced Seminar in Social Cognition\
+Advanced Seminar in Cognitive Neuroscience\
+:::
+
+:::
+
+:::
+:::
+
+
+## Ad-Hoc Reviewer
+
+::: {.card}
+::: card-body
+Brain, Behavior, and Immunity; Philosophical Transactions B; Social Cognition; Nature Scientific Reports,  Emotion; Affective Science; Motivation and Emotion;  Cogent Psychology; Journal of Neuroscience; Frontiers in Psychiatry; Peer Community In, PLOS ONE, Neuropsychobiology, Current Psychology, Journal of Experimental Social Psychology
+:::
+:::

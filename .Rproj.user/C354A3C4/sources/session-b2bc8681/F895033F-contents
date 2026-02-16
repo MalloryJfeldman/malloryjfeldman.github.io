@@ -1,0 +1,85 @@
+---
+title: "Research"
+output: 
+  html_document:
+    theme:
+      bootswatch: cosmo
+css: styles.css
+---
+
+All artwork on this page is by [Hanna Lee Joshi](https://hannaleejoshi.com/).
+
+```{=html}
+<div class="card mb-4">
+  <div class="card-body d-flex align-items-start">
+    
+    <img src="images/body.jpg" 
+         alt="Affective Science Lab Logo" 
+         class="me-3" 
+         style="width:150px; height:auto;">
+    
+    <div>
+      <h4 class="card-title">Evesdropping on conversations between body and brain.</h4>
+      <p class="card-text">
+        All day, every day, our brains are bombarded with sensations. These sensations come from intuitive sources like our eyes and ears — but also from the tissues and systems of our bodies. Just as “vision” refers to the perception of light, “interoception” refers to the perception of signals from within the body. I study how people sense and make sense of their bodies. In particular, much of my work examines how interoception contributes to affective and emotional experience — and how bodily signals shape the feelings we experience in everyday life.
+
+      </p>
+    </div>
+    
+  </div>
+</div>
+
+<div class="card mb-4">
+  <div class="card-body d-flex align-items-start">
+    
+    <img src="images/bodies.jpg" 
+         alt="Affective Science Lab Logo" 
+         class="me-3" 
+         style="width:150px; height:auto;">
+    
+    <div>
+      <h4 class="card-title">Exploring individual differences in body perception.</h4>
+      <p class="card-text">
+        People differ in their interoceptive perceptual traits, for example, their interoceptive beliefs (e.g., beliefs about the efficacy or trustworthiness of bodily sensations), interoceptive attention (attention toward internal bodily sensations), and interoceptive accuracy (objective performance in detecting changes in peripheral physiology). I am especially interested in how interoception changes across the lifespan as a function of biological aging, identity, lived experience, and cultural context. 
+
+      </p>
+    </div>
+    
+  </div>
+</div>
+
+
+<div class="card mb-4">
+  <div class="card-body d-flex align-items-start">
+    
+    <img src="images/social_body.jpg" 
+         alt="Artwork depicting abstract person" 
+         class="me-3" 
+         style="width:150px; height:auto;">
+    
+    <div>
+      <h4 class="card-title">Unpacking the body’s role in social cognition.</h4>
+      <p class="card-text">
+        Our bodies don’t just shape how we feel about ourselves — they shape how we perceive and respond to the world around us. Food looks more appetizing when we’re hungry and more nauseating when we’re full. This same logic extends to social perception. For example, when people experience heightened inflammation, they may feel more threatened by strangers yet more motivated to connect with close others. These embodied influences have important implications for health and social harmony. I study how bodily states inform social cognition.
+
+
+      </p>
+    </div>
+    
+  </div>
+</div>
+```
+
+```{=html}
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  document.querySelectorAll('a[href^="http"]').forEach(function(link) {
+    if (!link.hostname.includes(window.location.hostname)) {
+      link.setAttribute("target", "_blank");
+      link.setAttribute("rel", "noopener");
+    }
+  });
+});
+</script>
+```
+

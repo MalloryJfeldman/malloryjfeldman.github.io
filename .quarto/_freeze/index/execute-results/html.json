@@ -1,0 +1,15 @@
+{
+  "hash": "4620cae4d12bb03a2338871ab254131f",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Mallory J. Feldman, PhD\"\n---\n\nThis is a Quarto website.\n\nTo learn more about Quarto websites visit <https://quarto.org/docs/websites>.\n\n\n::: {.cell}\n\n```{.r .cell-code}\nprint(\"hello world\")\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n[1] \"hello world\"\n```\n\n\n:::\n:::\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

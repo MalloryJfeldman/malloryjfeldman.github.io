@@ -1,0 +1,450 @@
+---
+pagetitle: "Mallory J. Feldman, PhD"   # Title of the page
+toc: false                             # Disable table of contents
+bibliography: publications/papers.bib  # Path to your .bib file containing publications
+csl: publications/apa.csl              # Citation style file (APA 7th edition)
+nocite: |                              # Include all entries in the bibliography, even if not cited in text
+  @*
+execute:
+  echo: false       # Do not show R code in the output
+  warning: false    # Suppress warnings in output
+  message: false    # Suppress messages in output
+---
+
+This page lists all my published works, organized by year of publication. Click a paper’s title to visit the publisher page and access the official version. Use `Abstract` to reveal the summary, and `Citation` for the APA 7th-edition reference.<span style="font-size:0.9rem; opacity:0.8; margin-bottom:0.5rem;">* = co-first authorship</span> 
+
+Code for this page adapted from [Jeffrey Girard](https://affcom.ku.edu/research.html).
+
+```{r Load Libraries}
+# =========================================
+# LOAD REQUIRED LIBRARIES
+# =========================================
+# tidyverse: collection of R packages for data manipulation
+# RefManageR: read and work with .bib files (BibTeX)
+# htmltools: build HTML elements in R
+library(tidyverse)
+library(RefManageR)
+library(htmltools)
+```
+
+```{r Define Helper Functions}
+# =========================================
+# HELPER FUNCTIONS
+# =========================================
+
+# `%||%` operator: "if left is NULL or empty, use right"
+`%||%` <- function(a, b) if (is.null(a) || length(a) == 0) b else a
+
+# nz_chr: returns NA for blank or empty strings
+nz_chr <- function(x) ifelse(is.na(x) | trimws(x) == "", NA_character_, x)
+
+# strip_braces: removes curly braces from text (common in BibTeX)
+strip_braces <- function(x) {
+  if (is.null(x) || length(x) == 0) return(NA_character_)
+  y <- as.character(x)
+  gsub("[{}]", "", y, perl = TRUE)
+}
+
+# fmt_authors_card: formats authors for display on the card
+fmt_authors_card <- function(entry) {
+  au <- entry$author
+  if (is.null(au) || length(au) == 0) return(NA_character_)
+  
+  fmt_one <- function(a) {
+    fam_vec <- a$family
+    if (length(fam_vec)) paste(as.character(fam_vec), collapse = " ") else ""
+  }
+  
+  pieces <- vapply(au, fmt_one, character(1)) # vector of authors
+  pieces <- pieces[nzchar(pieces)]           # remove empty names
+  if (!length(pieces)) return(NA_character_)
+  
+  if (length(pieces) == 1) pieces
+  else paste(paste(pieces[-length(pieces)], collapse = ", "), "&", pieces[length(pieces)])
+}
+
+# get_abstract: retrieves abstract text (or annotation if abstract missing)
+get_abstract <- function(entry) {
+  abs <- entry$abstract %||% entry$annotation %||% NA_character_
+  if (isTRUE(is.na(abs)) || !nzchar(abs)) NA_character_ else abs
+}
+
+# normalize_link: converts DOI or URLs into clickable links
+normalize_link <- function(x) {
+  y <- as.character(x)
+  y[is.na(y)] <- NA_character_
+  y <- trimws(y)
+  y[y == "" | tolower(y) == "na"] <- NA_character_
+
+  ok <- !is.na(y)
+  doi_pref <- ok & grepl("^doi:\\s*", y, ignore.case = TRUE)
+  y[doi_pref] <- sub("^doi:\\s*", "", y[doi_pref], ignore.case = TRUE)
+
+  bare_doi <- ok & grepl("^10\\.", y)
+  y[bare_doi] <- paste0("https://doi.org/", y[bare_doi])
+
+  domain_like <- ok & grepl("^(www\\.|[A-Za-z0-9.-]+\\.[A-Za-z]{2,})(/|$)", y)
+  no_scheme   <- ok & !grepl("^https?://", y, ignore.case = TRUE)
+  needs_scheme <- domain_like & no_scheme
+  y[needs_scheme] <- paste0("https://", y[needs_scheme])
+
+  y
+}
+```
+
+```{r Read BIB}
+# =========================================
+# READ BIB FILE AND BUILD DATA FRAME
+# =========================================
+
+# Read the BibTeX file
+bib  <- ReadBib("publications/papers.bib", check = FALSE)
+keys <- names(bib)  # each paper has a unique key
+
+# Build a data frame (tibble) with all relevant info
+rows <- tibble(
+  key   = keys,
+  entry = lapply(keys, function(k) bib[k])
+) |>
+  mutate(
+    # Extract and clean title
+    title        = map_chr(entry, ~ strip_braces(.x$title %||% "")),
+    # Format authors
+    authors_card = map_chr(entry, fmt_authors_card),
+    # Extract year
+    year         = map_chr(entry, ~ {
+      y <- .x$year %||% .x$date %||% ""
+      if (is.list(y)) y$year %||% "" else as.character(y)
+    }),
+    # Extract venue (journal, booktitle, or publisher)
+    venue        = map_chr(entry, ~ strip_braces(.x$journal %||% .x$booktitle %||% .x$publisher %||% "")),
+    # Get abstract
+    abstract     = map_chr(entry, get_abstract),
+    # Extract keywords
+    keywords = map(entry, ~ {
+      kw <- .x$keywords %||% NA_character_
+      if (is.na(kw) || length(kw) == 0) character(0)
+      else strsplit(as.character(kw), ",\\s*")[[1]]}),
+
+    # Process DOI/URL
+    doi_url      = map_chr(entry, ~ normalize_link(.x$doi %||% .x$url %||% NA_character_)),
+    # Process local PDF file
+    pdf_url      = map_chr(entry, ~ {
+      f <- .x$file %||% NA_character_
+      if (!is.na(f) && length(f) > 0) as.character(f[[1]]) else NA_character_
+    })
+  ) |>
+  arrange(desc(year), title)  # Sort by year descending, then title
+```
+
+```{r Build Keyword Sidebar}
+# =========================================
+# BUILD KEYWORD SIDEBAR
+# =========================================
+
+# Get all unique keywords
+all_keywords <- rows %>%
+  pull(keywords) %>%
+  unlist() %>%
+  unique() %>%
+  sort()
+
+# Build HTML sidebar
+sidebar <- tags$div(
+  id = "keyword-sidebar",
+  style = "
+    position: fixed;
+    top: 100px;
+    right: 20px;
+    width: 180px;
+    max-height: 80vh;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 12px;
+    background: #fafafa;
+  ",
+  tags$h4("Filter by keyword"),
+  
+  # Button to show all publications
+  tags$div(
+    class = "keyword-item",
+    style = "cursor:pointer; padding:4px 0; font-weight:600; color:#0b66c3;",
+    `data-keyword` = "ALL",
+    "Show All"
+  ),
+  
+  # One div for each keyword
+  lapply(all_keywords, function(kw) {
+    tags$div(
+      class = "keyword-item",
+      style = "cursor:pointer; padding:2px 0; font-size:0.9rem; color:#0b66c3;",
+      `data-keyword` = kw,
+      kw
+    )
+  })
+)
+```
+
+```{=html}
+<!-- =========================================
+CLIENT-SIDE KEYWORD FILTERING
+========================================= -->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  // Get all publication cards
+  const cards = Array.from(document.querySelectorAll('.pub-card'));
+  // Get all keyword sidebar items
+  const items = Array.from(document.querySelectorAll('.keyword-item'));
+
+  // Add click event for each keyword
+  items.forEach(item => {
+    item.addEventListener('click', () => {
+      const kw = item.getAttribute('data-keyword');
+
+      if (kw === "ALL") {
+        // Show all cards if "Show All" clicked
+        cards.forEach(card => card.style.display = "block");
+        return;
+      }
+
+      // Otherwise, filter by keyword
+      cards.forEach(card => {
+        const cardKeywords = (card.getAttribute('data-keywords') || "").split("||");
+        if (cardKeywords.includes(kw)) {
+          card.style.display = "block";
+        } else {
+          card.style.display = "none";
+        }
+      });
+    });
+  });
+});
+</script>
+```
+
+```{css}
+/* =========================================*/
+/* STYLING FOR PUBLICATION CARDS*/
+/* =========================================*/
+
+/* Year group header */
+.year-group { margin: 28px 0 8px; }
+.year-title { margin: 0; font-size: 1.35rem; border-bottom: 1px solid #e5e7eb; padding-bottom: 2px; }
+
+/* Card layout */
+.pub-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 16px 16px 10px 16px;
+  margin: 14px 0;
+  background: #fff;
+}
+
+.pub-title { font-weight: 600; font-size: 1.05rem; margin-bottom: 4px; }
+.pub-title a { text-decoration: none; }
+.pub-meta  { color: #555; font-size: 0.95rem; margin-bottom: 8px; }
+
+/* Actions row: Abstract, Citation, PDF */
+.pub-actions {
+  display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center;
+  margin-top: 8px; margin-bottom: 8px;
+}
+.pub-actions a {
+  text-decoration: none; font-size: 0.92rem;
+  border-bottom: 1px dotted #999; color: #0b66c3; cursor: pointer;
+}
+.pub-actions a.external { border-bottom-style: solid; }
+
+/* Toggle area for Abstract/Citation */
+.toggle-area {
+  display: none; position: relative;
+  border: 1px solid #000; border-radius: 10px;
+  padding: 12px 44px 12px 12px; background: #fafafa;
+  margin-top: 10px; overflow: auto;
+}
+.toggle-area .panel-label {
+  font-size: 0.82rem; color: #333; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.03em;
+  opacity: 0.85; margin-bottom: 6px;
+}
+.toggle-area pre { white-space: pre-wrap; word-wrap: break-word; margin: 0; }
+.toggle-area .content p { margin: 0 0 0.6em 0; }
+
+/* Copy button */
+.copy-btn {
+  position: absolute; top: 6px; right: 6px;
+  border: 1px solid #ddd; background: #fff; font-size: 0.85rem;
+  padding: 4px 8px; border-radius: 6px; cursor: pointer;
+}
+.copy-btn:active { transform: translateY(1px); }
+.copy-toast {
+  position: absolute; top: 6px; right: 70px; font-size: 0.8rem;
+  background: #333; color: #fff; padding: 3px 7px; border-radius: 6px; display: none;
+}
+
+/* Hide auto-generated bibliography at bottom */
+div#refs, div#refs + h1, div#refs + h2 { display: none !important; }
+```
+
+```{=html}
+<!-- 
+=========================================
+TOGGLE ABSTRACT / CITATION AND COPY BUTTON
+========================================= 
+-->
+<script>
+(function() {
+  function getCard(el) {
+    while (el && !el.classList?.contains('pub-card')) el = el.parentNode;
+    return el;
+  }
+
+  function showPanel(card, label, html, mode) {
+    const area = card.querySelector('.toggle-area');
+    const labelEl = area.querySelector('.panel-label');
+    const contentEl = area.querySelector('.content');
+
+    const current = area.getAttribute('data-current');
+    if (current === mode && area.style.display === 'block') {
+      area.style.display = 'none';
+      area.setAttribute('data-current', '');
+      return;
+    }
+
+    labelEl.textContent = label;
+    contentEl.textContent = html;
+    area.style.display = 'block';
+    area.setAttribute('data-current', mode);
+  }
+
+  // Toggle Abstract/Citation
+  document.addEventListener('click', function(evt) {
+    const a = evt.target.closest('a[data-action]');
+    if (!a) return;
+    const action = a.getAttribute('data-action');
+    const card   = getCard(a);
+    if (!card) return;
+    evt.preventDefault();
+
+    const key = card.getAttribute('data-key');
+
+    if (action === 'abstract') {
+      const payloadEl = card.querySelector('.payload-abstract');
+      const text = (payloadEl?.textContent || 'No abstract available.').trim();
+      showPanel(card, 'Abstract', text, 'abstract');
+    } else if (action === 'citation') {
+      const ref = document.querySelector('#ref-' + key);
+      const html = (ref ? ref.textContent : 'Citation unavailable.').trim();
+      showPanel(card, 'Citation', html, 'citation');
+    }
+  }, false);
+
+  // Copy button functionality
+  document.addEventListener('click', function(evt) {
+    const btn = evt.target.closest('.copy-btn');
+    if (!btn) return;
+    const card = getCard(btn);
+    const area = card.querySelector('.toggle-area');
+    const contentEl = area.querySelector('.content');
+
+    let textToCopy = '';
+    const pre = contentEl.querySelector('pre');
+    if (pre) textToCopy = pre.textContent;
+    else textToCopy = contentEl.innerText;
+
+    navigator.clipboard.writeText(textToCopy).then(() => {
+      const toast = area.querySelector('.copy-toast');
+      toast.style.display = 'inline-block';
+      setTimeout(() => { toast.style.display = 'none'; }, 1200);
+    });
+  }, false);
+})();
+</script>
+```
+
+```{r Build Publication Cards}
+# =========================================
+# FUNCTION TO BUILD EACH PUBLICATION CARD
+# =========================================
+
+build_card <- function(
+  key, entry, title, authors_card, year, venue,
+  abstract, doi_url = NA_character_, pdf_url = NA_character_, keywords = character(),...
+) {
+  # Hidden abstract payload
+  payloads <- tags$div(
+    style = "display:none;",
+    tags$div(class = "payload-abstract", abstract %||% "")
+  )
+
+  # Title: clickable if DOI exists
+  ttl_node <- if (isTRUE(nzchar(doi_url %||% ""))) {
+    tags$div(class = "pub-title", tags$a(title, href = doi_url, target = "_blank", rel = "noopener"))
+  } else {
+    tags$div(class = "pub-title", title)
+  }
+
+  # Authors and venue
+  meta <- tags$div(
+    class = "pub-meta",
+    if (nzchar(authors_card %||% "")) tagList(HTML(authors_card), tags$br()) else NULL,
+    if (nzchar(venue %||% "")) tags$em(venue) else NULL
+  )
+
+  # Action buttons: Abstract, Citation, PDF
+  actions <- tags$div(
+    class = "pub-actions",
+    tags$a("Abstract", href = "#", `data-action`="abstract", role="button"),
+    tags$a("Citation", href = "#", `data-action`="citation", role="button"),
+    if (!is.na(pdf_url) && nzchar(pdf_url)) {
+      tags$a("[PDF]", href = pdf_url, target="_blank", rel="noopener", class="external")
+    }
+  )
+
+  # Panel that toggles open when clicking Abstract/Citation
+  toggle_panel <- tags$div(
+    class = "toggle-area",
+    `data-current` = "",
+    tags$button(class = "copy-btn", "Copy"),
+    tags$span(class = "copy-toast", "Copied!"),
+    tags$div(class = "panel-label", "—"),
+    tags$div(class = "content")
+  )
+
+  # Build the full card
+  tags$div(
+    class = "pub-card", 
+    `data-key` = key, 
+    `data-keywords` = paste0(keywords, collapse = "||"),
+    ttl_node, meta, actions, toggle_panel, payloads
+  )
+}
+
+# Get all years (descending)
+years <- rows |> distinct(year) |> arrange(desc(year)) |> pull(year)
+
+# Group cards by year
+groups <- lapply(years, function(y) {
+  subset <- rows |> filter(year == y)
+
+  subset_min <- subset |>
+    select(key, entry, title, authors_card, year, keywords, venue, abstract, doi_url, pdf_url)
+
+  cards <- pmap(subset_min, build_card)
+
+  tags$div(
+    class = "year-group",
+    tags$h2(class = "year-title anchored", id = paste0("y-", y), str_to_title(y)),
+    tags$div(cards)
+  )
+})
+
+# Render the entire page: sidebar + cards
+browsable(
+  tags$div(
+    sidebar,        # Keyword filter sidebar
+    tags$div(groups) # Publication cards
+  )
+)
+```
