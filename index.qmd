@@ -6,7 +6,7 @@ css: styles.css
 
 ::: spotlight-container
 ::: spotlight-image
-![Sometimes We Dance by Hanna Lee Joshi (<https://hannaleejoshi.com/>)](./images/SometimesWeDance.jpg){.hero fig-alt="Artist depiction of four women dancing."}
+![](./images/profile.jpg){.hero fig-alt="Profile picture." width="300"}
 :::
 
 ::: spotlight-text
@@ -19,6 +19,7 @@ css: styles.css
 ::: callout-note
 I'll be on the academic job market in 2026, looking for a tenure-track assistant professorship.
 :::
+
 ```{=html}
 <script>
 document.addEventListener("DOMContentLoaded", function() {
