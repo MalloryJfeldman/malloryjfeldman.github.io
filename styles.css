@@ -153,3 +153,10 @@
     font-size: 1rem;
   }
 }
+
+/* Hide keyword sidebar on screens smaller than 768px */
+@media (max-width: 768px) {
+  #keyword-sidebar {
+    display: none !important;
+  }
+}

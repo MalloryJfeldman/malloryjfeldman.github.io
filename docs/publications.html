@@ -195,30 +195,24 @@ CLIENT-SIDE KEYWORD FILTERING
 ========================================= -->
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-  // Get all publication cards
+  // Only enable keyword filtering on desktop
+  if (window.innerWidth <= 768) return; // Skip on mobile
+
   const cards = Array.from(document.querySelectorAll('.pub-card'));
-  // Get all keyword sidebar items
   const items = Array.from(document.querySelectorAll('.keyword-item'));
 
-  // Add click event for each keyword
   items.forEach(item => {
     item.addEventListener('click', () => {
       const kw = item.getAttribute('data-keyword');
 
       if (kw === "ALL") {
-        // Show all cards if "Show All" clicked
         cards.forEach(card => card.style.display = "block");
         return;
       }
 
-      // Otherwise, filter by keyword
       cards.forEach(card => {
         const cardKeywords = (card.getAttribute('data-keywords') || "").split("||");
-        if (cardKeywords.includes(kw)) {
-          card.style.display = "block";
-        } else {
-          card.style.display = "none";
-        }
+        card.style.display = cardKeywords.includes(kw) ? "block" : "none";
       });
     });
   });
