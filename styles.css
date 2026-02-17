@@ -101,3 +101,41 @@
   }
 }
 
+/* ===== Research Cards ===== */
+.research-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap; /* allows stacking on small screens */
+}
+
+.research-card img {
+  width: 150px;
+  height: auto;
+  border-radius: 8px;
+  flex-shrink: 0; /* keep image from shrinking too small */
+}
+
+.research-text {
+  flex: 1;
+  min-width: 200px; /* ensures text wraps nicely on small screens */
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .research-card {
+    flex-direction: column; /* stack image above text */
+    align-items: center;
+  }
+
+  .research-card img {
+    width: 80%; /* scales down for mobile */
+    max-width: 300px;
+    margin-bottom: 1rem;
+  }
+
+  .research-text {
+    text-align: center;
+  }
+}
