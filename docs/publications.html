@@ -134,43 +134,6 @@ div.csl-indent {
 <span class="menu-text">CONTACT</span></a>
   </li>  
 </ul>
-            <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item compact">
-    <a class="nav-link" href="https://scholar.google.com/scholar?as_sdt=0%2C14&amp;btnG=&amp;hl=en&amp;q=Mallory%20Feldman"> <i class="bi bi-google" role="img" aria-label="Google Scholar">
-</i> 
-<span class="menu-text"></span></a>
-  </li>  
-  <li class="nav-item compact">
-    <a class="nav-link" href="https://orcid.org/0000-0003-1051-2088"> <i class="bi bi-info-circle-fill" role="img" aria-label="ORCID">
-</i> 
-<span class="menu-text"></span></a>
-  </li>  
-  <li class="nav-item compact">
-    <a class="nav-link" href="https://www.researchgate.net/profile/Mallory-Feldman/publications"> <i class="bi bi-r-square-fill" role="img" aria-label="ResearchGate">
-</i> 
-<span class="menu-text"></span></a>
-  </li>  
-  <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/MalloryJfeldman"> <i class="bi bi-github" role="img" aria-label="GitHub">
-</i> 
-<span class="menu-text"></span></a>
-  </li>  
-  <li class="nav-item compact">
-    <a class="nav-link" href="https://osf.io/m324r/"> <i class="bi bi-openai" role="img" aria-label="OSF">
-</i> 
-<span class="menu-text"></span></a>
-  </li>  
-  <li class="nav-item compact">
-    <a class="nav-link" href="https://bsky.app/profile/malloryjfeldman.bsky.social"> <i class="bi bi-bluesky" role="img" aria-label="BlueSky">
-</i> 
-<span class="menu-text"></span></a>
-  </li>  
-  <li class="nav-item compact">
-    <a class="nav-link" href="https://www.linkedin.com/in/malloryjfeldman/"> <i class="bi bi-linkedin" role="img" aria-label="LinkedIn">
-</i> 
-<span class="menu-text"></span></a>
-  </li>  
-</ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
 </div>
@@ -188,189 +151,55 @@ div.csl-indent {
 
 
 
-<p>This page lists all my published works, organized by year of publication. Click a paper’s title to visit the publisher page and access the official version. Use <code>Abstract</code> to reveal the summary, and <code>Citation</code> for the APA 7th-edition reference.<span style="font-size:0.9rem; opacity:0.8; margin-bottom:0.5rem;">* = co-first authorship</span></p>
-<p>Code for this page adapted from <a href="https://affcom.ku.edu/research.html">Jeffrey Girard</a>.</p>
-<!-- =========================================
-CLIENT-SIDE KEYWORD FILTERING
-========================================= -->
+<p>This page lists all my published works, organized by year. Click a paper’s title to visit the publisher page. Use <code>Abstract</code> to reveal the summary, and <code>Citation</code> for the APA 7th-edition reference.<span style="font-size:0.9rem; opacity:0.8;">* = co-first authorship</span></p>
+<p>Code adapted from <a href="https://affcom.ku.edu/research.html">Jeffrey Girard</a>.</p>
+<!-- KEYWORD FILTER SCRIPT: hides on mobile too -->
 <script>
-document.addEventListener("DOMContentLoaded", function() {
-  // Only enable keyword filtering on desktop
-  if (window.innerWidth <= 768) return; // Skip on mobile
-
-  const cards = Array.from(document.querySelectorAll('.pub-card'));
-  const items = Array.from(document.querySelectorAll('.keyword-item'));
-
-  items.forEach(item => {
-    item.addEventListener('click', () => {
-      const kw = item.getAttribute('data-keyword');
-
-      if (kw === "ALL") {
-        cards.forEach(card => card.style.display = "block");
-        return;
-      }
-
-      cards.forEach(card => {
-        const cardKeywords = (card.getAttribute('data-keywords') || "").split("||");
-        card.style.display = cardKeywords.includes(kw) ? "block" : "none";
-      });
-    });
-  });
+document.addEventListener("DOMContentLoaded",function(){
+  const cards=Array.from(document.querySelectorAll('.pub-card'));
+  const items=Array.from(document.querySelectorAll('.keyword-item'));
+  // Hide sidebar on mobile
+  if(window.innerWidth<=768){
+    const sidebar=document.getElementById('keyword-sidebar'); if(sidebar) sidebar.style.display='none';
+    return;
+  }
+  items.forEach(item=>item.addEventListener('click',()=>{
+    const kw=item.getAttribute('data-keyword');
+    cards.forEach(card=>card.style.display=(kw==="ALL")?"block":(card.getAttribute('data-keywords')||"").split("||").includes(kw)?"block":"none");
+  }));
 });
 </script>
 <div class="cell">
 <style type="text/css">
-/* =========================================*/
-/* STYLING FOR PUBLICATION CARDS*/
-/* =========================================*/
+/* =========================================
+   PUBLICATION CARDS AND MOBILE FIXES
+========================================= */
+.year-group{margin:28px 0 8px;}
+.year-title{margin:0;font-size:1.35rem;border-bottom:1px solid #e5e7eb;padding-bottom:2px;}
+.pub-card{border:1px solid #e5e7eb;border-radius:14px;padding:16px;margin:14px 0;background:#fff;}
+.pub-title{font-weight:600;font-size:1.05rem;margin-bottom:4px;}
+.pub-title a{text-decoration:none;}
+.pub-meta{color:#555;font-size:0.95rem;margin-bottom:8px;}
+.pub-actions{display:flex;flex-wrap:wrap;gap:8px 14px;margin-top:8px;margin-bottom:8px;}
+.pub-actions a{text-decoration:none;font-size:0.92rem;border-bottom:1px dotted #999;color:#0b66c3;cursor:pointer;}
+.pub-actions a.external{border-bottom-style:solid;}
+.toggle-area{display:none;position:relative;border:1px solid #000;border-radius:10px;padding:12px 44px 12px 12px;background:#fafafa;margin-top:10px;overflow:auto;}
+.toggle-area .panel-label{font-size:0.82rem;color:#333;font-weight:600;text-transform:uppercase;letter-spacing:0.03em;opacity:0.85;margin-bottom:6px;}
+.copy-btn{position:absolute;top:6px;right:6px;border:1px solid #ddd;background:#fff;font-size:0.85rem;padding:4px 8px;border-radius:6px;cursor:pointer;}
+.copy-toast{position:absolute;top:6px;right:70px;font-size:0.8rem;background:#333;color:#fff;padding:3px 7px;border-radius:6px;display:none;}
+div#refs,div#refs + h1,div#refs + h2{display:none !important;}
 
-/* Year group header */
-.year-group { margin: 28px 0 8px; }
-.year-title { margin: 0; font-size: 1.35rem; border-bottom: 1px solid #e5e7eb; padding-bottom: 2px; }
-
-/* Card layout */
-.pub-card {
-  border: 1px solid #e5e7eb;
-  border-radius: 14px;
-  padding: 16px 16px 10px 16px;
-  margin: 14px 0;
-  background: #fff;
+/* Mobile-specific adjustments for cards */
+@media(max-width:768px){
+  .pub-card{flex-direction:column;width:100%;box-sizing:border-box;margin:12px 0;}
+  #keyword-sidebar{display:none !important;}
 }
-
-.pub-title { font-weight: 600; font-size: 1.05rem; margin-bottom: 4px; }
-.pub-title a { text-decoration: none; }
-.pub-meta  { color: #555; font-size: 0.95rem; margin-bottom: 8px; }
-
-/* Actions row: Abstract, Citation, PDF */
-.pub-actions {
-  display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center;
-  margin-top: 8px; margin-bottom: 8px;
-}
-.pub-actions a {
-  text-decoration: none; font-size: 0.92rem;
-  border-bottom: 1px dotted #999; color: #0b66c3; cursor: pointer;
-}
-.pub-actions a.external { border-bottom-style: solid; }
-
-/* Toggle area for Abstract/Citation */
-.toggle-area {
-  display: none; position: relative;
-  border: 1px solid #000; border-radius: 10px;
-  padding: 12px 44px 12px 12px; background: #fafafa;
-  margin-top: 10px; overflow: auto;
-}
-.toggle-area .panel-label {
-  font-size: 0.82rem; color: #333; font-weight: 600;
-  text-transform: uppercase; letter-spacing: 0.03em;
-  opacity: 0.85; margin-bottom: 6px;
-}
-.toggle-area pre { white-space: pre-wrap; word-wrap: break-word; margin: 0; }
-.toggle-area .content p { margin: 0 0 0.6em 0; }
-
-/* Copy button */
-.copy-btn {
-  position: absolute; top: 6px; right: 6px;
-  border: 1px solid #ddd; background: #fff; font-size: 0.85rem;
-  padding: 4px 8px; border-radius: 6px; cursor: pointer;
-}
-.copy-btn:active { transform: translateY(1px); }
-.copy-toast {
-  position: absolute; top: 6px; right: 70px; font-size: 0.8rem;
-  background: #333; color: #fff; padding: 3px 7px; border-radius: 6px; display: none;
-}
-
-/* Hide auto-generated bibliography at bottom */
-div#refs, div#refs + h1, div#refs + h2 { display: none !important; }
 </style>
 </div>
-<!-- 
-=========================================
-TOGGLE ABSTRACT / CITATION AND COPY BUTTON
-========================================= 
--->
-<script>
-(function() {
-  function getCard(el) {
-    while (el && !el.classList?.contains('pub-card')) el = el.parentNode;
-    return el;
-  }
-
-  function showPanel(card, label, html, mode) {
-    const area = card.querySelector('.toggle-area');
-    const labelEl = area.querySelector('.panel-label');
-    const contentEl = area.querySelector('.content');
-
-    const current = area.getAttribute('data-current');
-    if (current === mode && area.style.display === 'block') {
-      area.style.display = 'none';
-      area.setAttribute('data-current', '');
-      return;
-    }
-
-    labelEl.textContent = label;
-    contentEl.textContent = html;
-    area.style.display = 'block';
-    area.setAttribute('data-current', mode);
-  }
-
-  // Toggle Abstract/Citation
-  document.addEventListener('click', function(evt) {
-    const a = evt.target.closest('a[data-action]');
-    if (!a) return;
-    const action = a.getAttribute('data-action');
-    const card   = getCard(a);
-    if (!card) return;
-    evt.preventDefault();
-
-    const key = card.getAttribute('data-key');
-
-    if (action === 'abstract') {
-      const payloadEl = card.querySelector('.payload-abstract');
-      const text = (payloadEl?.textContent || 'No abstract available.').trim();
-      showPanel(card, 'Abstract', text, 'abstract');
-    } else if (action === 'citation') {
-      const ref = document.querySelector('#ref-' + key);
-      const html = (ref ? ref.textContent : 'Citation unavailable.').trim();
-      showPanel(card, 'Citation', html, 'citation');
-    }
-  }, false);
-
-  // Copy button functionality
-  document.addEventListener('click', function(evt) {
-    const btn = evt.target.closest('.copy-btn');
-    if (!btn) return;
-    const card = getCard(btn);
-    const area = card.querySelector('.toggle-area');
-    const contentEl = area.querySelector('.content');
-
-    let textToCopy = '';
-    const pre = contentEl.querySelector('pre');
-    if (pre) textToCopy = pre.textContent;
-    else textToCopy = contentEl.innerText;
-
-    navigator.clipboard.writeText(textToCopy).then(() => {
-      const toast = area.querySelector('.copy-toast');
-      toast.style.display = 'inline-block';
-      setTimeout(() => { toast.style.display = 'none'; }, 1200);
-    });
-  }, false);
-})();
-</script>
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<div id="keyword-sidebar" style="
-    position: fixed;
-    top: 100px;
-    right: 20px;
-    width: 180px;
-    max-height: 80vh;
-    overflow-y: auto;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 12px;
-    background: #fafafa;
-  ">
+<div id="keyword-sidebar" class="sidebar" style="position:fixed; top:100px; right:20px; width:180px; max-height:80vh; overflow-y:auto; border:1px solid #ddd; border-radius:8px; padding:12px; background:#fafafa;">
 <h4 class="anchored">Filter by keyword</h4>
 <div class="keyword-item" style="cursor:pointer; padding:4px 0; font-weight:600; color:#0b66c3;" data-keyword="ALL">Show All</div>
 <div class="keyword-item" style="cursor:pointer; padding:2px 0; font-size:0.9rem; color:#0b66c3;" data-keyword="Adolescent Development">Adolescent Development</div>
@@ -1476,15 +1305,58 @@ West, T. N., Jolink, T. A., Feldman, M. J., Alvarez, G. M., Cardenas, M. N., Fre
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-      &nbsp;
-    </div>   
+<p>© 2026 Mallory J. Feldman<br>
+Built with <a href="https://quarto.org">Quarto</a></p>
+</div>   
     <div class="nav-footer-center">
       &nbsp;
     </div>
     <div class="nav-footer-right">
-<p>© 2026 Mallory J. Feldman<br>
-Built with <a href="https://quarto.org">Quarto</a></p>
-</div>
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://scholar.google.com/scholar?as_sdt=0%2C14&amp;btnG=&amp;hl=en&amp;q=Mallory%20Feldman">
+      <i class="bi bi-google" role="img" aria-label="Google Scholar">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://orcid.org/0000-0003-1051-2088">
+      <i class="bi bi-info-circle-fill" role="img" aria-label="ORCID">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.researchgate.net/profile/Mallory-Feldman/publications">
+      <i class="bi bi-r-square-fill" role="img" aria-label="ResearchGate">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/MalloryJfeldman">
+      <i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://osf.io/m324r/">
+      <i class="bi bi-openai" role="img" aria-label="OSF">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://bsky.app/profile/malloryjfeldman.bsky.social">
+      <i class="bi bi-bluesky" role="img" aria-label="BlueSky">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/malloryjfeldman/">
+      <i class="bi bi-linkedin" role="img" aria-label="LinkedIn">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
   </div>
 </footer>
 

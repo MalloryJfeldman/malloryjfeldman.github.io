@@ -19,7 +19,13 @@ website:
       - href: contact.qmd
         text: CONTACT
       
-    
+      
+  
+  page-footer:
+    left: |
+      © 2026 Mallory J. Feldman  
+      Built with [Quarto](https://quarto.org)
+      
     right:
       - href: https://scholar.google.com/scholar?as_sdt=0%2C14&btnG=&hl=en&q=Mallory%20Feldman 
         icon: "google"       # Google Scholar
@@ -42,12 +48,6 @@ website:
       - href: https://www.linkedin.com/in/malloryjfeldman/
         icon: "linkedin"     # LinkedIn
         aria-label: LinkedIn
-      
-  
-  page-footer:
-    right: |
-      © 2026 Mallory J. Feldman  
-      Built with [Quarto](https://quarto.org)
 
 
 format:

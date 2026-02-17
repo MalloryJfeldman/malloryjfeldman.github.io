@@ -154,7 +154,7 @@
   }
 }
 
-/* Mobile-only: hide keyword sidebar */
+/* Hide keyword sidebar entirely on mobile */
 @media (max-width: 768px) {
   #keyword-sidebar {
     display: none !important;
