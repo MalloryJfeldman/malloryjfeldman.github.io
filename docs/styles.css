@@ -74,10 +74,10 @@
 }
 
 .about-banner img {
-  width: 100%;
-  height: 280px;
-  object-fit: cover;
-  border-radius: 0.75rem;
+  width: 100%;         /* fill the container width */
+  height: 280px;       /* fixed height */
+  object-fit: cover;   /* crops to fit the height/width without distortion */
+  border-radius: 12px; /* optional */
 }
 
 /* Text content */
@@ -100,3 +100,4 @@
     line-height: 1.6;
   }
 }
+

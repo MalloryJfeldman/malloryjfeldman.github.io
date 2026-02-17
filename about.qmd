@@ -18,9 +18,5 @@ Outside of research, I enjoy running, reading, crafting, and spending time outdo
 <!-- Horizontal Banner Image -->
 
 ::: about-banner
-```{=html}
-<img src="images/20260216-MalloryHeadshots-4911.jpg"
-       alt="Abstract representation of body-brain connection"
-       class="img-fluid">
-```
+![](images/20260216-MalloryHeadshots-4911.jpg){.img-fluid .about-banner-img alt="..."}
 :::
