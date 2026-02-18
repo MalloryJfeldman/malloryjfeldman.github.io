@@ -57,7 +57,7 @@ normalize_link <- function(x){
 # =========================================
 # READ BIB FILE AND PREP DATA FRAME
 # =========================================
-bib <- ReadBib("publications/papers.bib",check=FALSE)
+bib <- ReadBib("publications/papers.bib",check=FALSE) #update
 keys <- names(bib)
 rows <- tibble(key=keys, entry=lapply(keys, function(k) bib[k])) |>
   mutate(
