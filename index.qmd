@@ -4,20 +4,20 @@ output: html_document
 css: styles.css
 ---
 
+::: callout-note
+I'll be on the academic job market in 2026, looking for a tenure-track assistant professorship.
+:::
+
 ::: spotlight-container
 ::: spotlight-image
-![](./images/profile.jpg){.hero fig-alt="Profile picture." width="300"}
+![](./images/SometimesWeDance.jpg){.hero fig-alt="Profile picture." width="300" fig-cap="Sometimes We Dance by [Hanna Lee Joshi](https://hannaleejoshi.com/)"}
 :::
 
 ::: spotlight-text
 **I am a postdoctoral scholar at The Ohio State University** & a member of both the [Affective Science Lab](https://affectivesciencelab.com/) & the [Social Neuroscience and Health Lab](https://carolinasnhlab.com/). I study how people sense and make sense of their bodies with implications for human health & social functioning across the lifespan.
 
-[Learn more about me →](about.qmd){.btn .btn-secondary}
+[Learn more about me →](about.qmd)
 :::
-:::
-
-::: callout-note
-I'll be on the academic job market in 2026, looking for a tenure-track assistant professorship.
 :::
 
 ```{=html}

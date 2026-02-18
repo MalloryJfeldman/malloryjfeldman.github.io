@@ -2,7 +2,7 @@
 title: "Curriculum Vitae"
 ---
 
-[Download CV (PDF; Last Updated 02-2026)](files/Feldman_CV.pdf)
+[Download CV](https://docs.google.com/document/d/1MTehANlERjCk7fYqt_nXaR1tqve-KHZMiuJreNzapuI/edit?tab=t.0)
 
 ## **Academic Appointments**
 
@@ -50,47 +50,15 @@ Advisers: Sam Sommers, PhD; Dale Bryan
 :::
 :::
 
-## Relevant Coursework
-
-::: {.card}
-::: card-body
-
-::: columns
-
-::: {.column width="50%"}
-#### Methodological\
-ANOVA\
-Regression\
-Structural Equation Modeling\
-Factor Analysis\
-Multilevel Modeling\
-Time Series Analysis\
-Computational Psychology\
-Machine Learning\
-Functional MRI\
-Community Based Participatory Research\
-:::
-
-::: {.column width="50%"}
-#### Content\
-Methods of Social Psychology\
-Social and Affective Neuroscience\
-Advanced Seminar in Psychology of Emotions\
-Advanced Seminar in Positive Psychology\
-Advanced Seminar in Social Cognition\
-Advanced Seminar in Cognitive Neuroscience\
-:::
-
-:::
-
-:::
-:::
-
-
-## Ad-Hoc Reviewer
-
-::: {.card}
-::: card-body
-Brain, Behavior, and Immunity; Philosophical Transactions B; Social Cognition; Nature Scientific Reports,  Emotion; Affective Science; Motivation and Emotion;  Cogent Psychology; Journal of Neuroscience; Frontiers in Psychiatry; Peer Community In, PLOS ONE, Neuropsychobiology, Current Psychology, Journal of Experimental Social Psychology
-:::
-:::
+```{=html}
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  document.querySelectorAll('a[href^="http"]').forEach(function(link) {
+    if (!link.hostname.includes(window.location.hostname)) {
+      link.setAttribute("target", "_blank");
+      link.setAttribute("rel", "noopener");
+    }
+  });
+});
+</script>
+```

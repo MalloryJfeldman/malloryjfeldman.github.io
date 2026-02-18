@@ -1,0 +1,10 @@
+---
+title: "Commitments"
+output: 
+  html_document:
+    theme:
+      bootswatch: cosmo
+css: styles.css
+---
+
+Every institution suffers from racism, sexism, homophobia, transphobia, and ableism - and science is no exception. I have personally benefited from these systems of oppression. I am committed to working towards an academy where every individual is valued regardless of their age, race, disability, ethnicity, family or marital status, sex, gender identity or expression, language, national origin, political affiliation, religion, sexual orientation, and/or socio-economic status. I encourage my students, collaborators, friends, and family members to hold me accountable. 

@@ -22,5 +22,11 @@
   },
   "curriculum vitae.qmd": {
     "curriculum vitae.html": "5904e9d9"
+  },
+  "footer/commitments.qmd": {
+    "commitments.html": "485801e7"
+  },
+  "footer/license.qmd": {
+    "license.html": "134b02c3"
   }
 }

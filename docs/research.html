@@ -154,7 +154,7 @@ ul.task-list li input[type="checkbox"] {
   <div class="research-text">
     <h4 class="anchored">Eavesdropping on conversations between body and brain</h4>
     <p>
-      All day, every day, our brains are bombarded with sensations. These sensations come from intuitive sources like our eyes and ears — but also from the tissues and systems of our bodies. Just as “vision” refers to the perception of light, “interoception” refers to the perception of signals from within the body. I study how people sense and make sense of their bodies. In particular, much of my work examines how interoception contributes to affective and emotional experience — and how bodily signals shape the feelings we experience in everyday life.
+      All day, every day, our brains are bombarded with sensations. These sensations come from intuitive sources like our eyes and ears — but also from the tissues and systems of our bodies. Just as “vision” refers to the perception of light, “interoception” refers to the perception of signals from within the body. I study how people sense and make sense of their bodies. In particular, much of my work examines how interoception contributes to affective and emotional experience.
     </p>
   </div>
 </div>
@@ -174,11 +174,21 @@ ul.task-list li input[type="checkbox"] {
   <div class="research-text">
     <h4 class="anchored">Unpacking the body’s role in social cognition</h4>
     <p>
-      Our bodies don’t just shape how we feel about ourselves — they shape how we perceive and respond to the world around us. Food looks more appetizing when we’re hungry and more nauseating when we’re full. This same logic extends to social perception. For example, when people experience heightened inflammation, they may feel more threatened by strangers yet more motivated to connect with close others. These embodied influences have important implications for health and social harmony. I study how bodily states inform social cognition.
+      Our bodies don’t just shape how we feel about ourselves — they shape how we perceive and respond to the world around us. Food looks more appetizing when we’re hungry and more nauseating when we’re full. This same logic extends to social perception. For example, when people experience heightened inflammation, they may feel more threatened by strangers yet more motivated to connect with close others. These embodied influences have important implications for health and social harmony. 
     </p>
   </div>
 </div>
 
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  document.querySelectorAll('a[href^="http"]').forEach(function(link) {
+    if (!link.hostname.includes(window.location.hostname)) {
+      link.setAttribute("target", "_blank");
+      link.setAttribute("rel", "noopener");
+    }
+  });
+});
+</script>
 
 
 
@@ -587,13 +597,9 @@ ul.task-list li input[type="checkbox"] {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>© 2026 Mallory J. Feldman<br>
-Built with <a href="https://quarto.org">Quarto</a></p>
+<p>© 2026 Mallory J. Feldman ; Built with <a href="https://quarto.org">Quarto</a></p>
 </div>   
     <div class="nav-footer-center">
-      &nbsp;
-    </div>
-    <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">
     <a class="nav-link" href="https://scholar.google.com/scholar?as_sdt=0%2C14&amp;btnG=&amp;hl=en&amp;q=Mallory%20Feldman">
@@ -636,6 +642,20 @@ Built with <a href="https://quarto.org">Quarto</a></p>
       <i class="bi bi-linkedin" role="img" aria-label="LinkedIn">
 </i> 
     </a>
+  </li>  
+</ul>
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="./footer/commitments.html">
+<p>Commitments</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="./footer/license.html">
+<p>License</p>
+</a>
   </li>  
 </ul>
     </div>

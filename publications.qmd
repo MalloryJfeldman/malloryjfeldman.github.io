@@ -101,6 +101,72 @@ document.addEventListener("DOMContentLoaded",function(){
   }));
 });
 </script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+
+  // Handle Abstract / Citation toggle
+  document.querySelectorAll('.pub-card').forEach(card => {
+
+    const panel = card.querySelector('.toggle-area');
+    const content = panel.querySelector('.content');
+    const label = panel.querySelector('.panel-label');
+    const abstractPayload = card.querySelector('.payload-abstract')?.innerHTML || "";
+
+    card.querySelectorAll('[data-action]').forEach(btn => {
+
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        const action = this.getAttribute('data-action');
+        const current = panel.getAttribute('data-current');
+
+        // If clicking same thing twice → close panel
+        if (current === action) {
+          panel.style.display = "none";
+          panel.setAttribute('data-current', "");
+          return;
+        }
+
+        // Otherwise open and populate
+        panel.style.display = "block";
+        panel.setAttribute('data-current', action);
+
+        if (action === "abstract") {
+          label.textContent = "Abstract";
+          content.innerHTML = abstractPayload || "<em>No abstract available.</em>";
+        }
+
+        if (action === "citation") {
+          label.textContent = "Citation";
+          content.innerHTML = "Rendering citation…";
+          
+          // Grab formatted citation from Quarto refs
+          const key = card.getAttribute('data-key');
+          const ref = document.querySelector(`#ref-${key}`);
+          content.innerHTML = ref ? ref.innerHTML : "<em>Citation not found.</em>";
+        }
+      });
+
+    });
+
+    // Copy button
+    const copyBtn = panel.querySelector('.copy-btn');
+    const toast = panel.querySelector('.copy-toast');
+
+    copyBtn.addEventListener('click', function() {
+      const text = content.innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        toast.style.display = "inline";
+        setTimeout(() => toast.style.display = "none", 1200);
+      });
+    });
+
+  });
+
+});
+</script>
+
 ```
 
 ```{css}
@@ -155,3 +221,15 @@ browsable(tags$div(sidebar, tags$div(groups)))
 ```
 
 
+```{=html}
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  document.querySelectorAll('a[href^="http"]').forEach(function(link) {
+    if (!link.hostname.includes(window.location.hostname)) {
+      link.setAttribute("target", "_blank");
+      link.setAttribute("rel", "noopener");
+    }
+  });
+});
+</script>
+```

@@ -7,6 +7,13 @@ output:
 css: styles.css
 ---
 
+::: spotlight-container
+::: spotlight-image
+![](./images/profile.jpg){fig-alt="Profile picture."}
+:::
+
+::: spotlight-text
+
 I am a postdoctoral scholar at The Ohio State University, where I work in the [Affective Science Laboratory](https://affectivesciencelab.com). I'm also an active member of the [Social Neuroscience and Health Laboratory](https://carolinasnhlab.com) at the University of North Carolina at Chapel Hill.
 
 My research program investigates how people sense and make sense of their bodies, with implications for health and social functioning across the lifespan. I study questions such as: How does the brain represent information from the body? How do cultural context and life experience shape how we access bodily signals? How do people use information from their bodies to evaluate themselves (“How do I feel?”) and others (“Are you trustworthy?”)?
@@ -15,8 +22,19 @@ To address these questions, I draw on interdisciplinary theory from psychology, 
 
 Outside of research, I enjoy running, reading, crafting, and spending time outdoors with my husband, son, and dog, Mylo.
 
-<!-- Horizontal Banner Image -->
+[Learn more about my research →](research.qmd)
 
-::: about-banner
-![](images/20260216-MalloryHeadshots-4911.jpg){.img-fluid .about-banner-img alt="..."}
 :::
+:::
+```{=html}
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  document.querySelectorAll('a[href^="http"]').forEach(function(link) {
+    if (!link.hostname.includes(window.location.hostname)) {
+      link.setAttribute("target", "_blank");
+      link.setAttribute("rel", "noopener");
+    }
+  });
+});
+</script>
+```

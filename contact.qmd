@@ -16,16 +16,11 @@ I welcome inquiries about research collaborations, invited talks, and student me
 ### Offices
 
 ```{=html}
-<div class="card mb-4">
+<div class="lab-card card mb-4">
   <div class="card-body d-flex align-items-start">
-    
-    <!-- Left: Lab logo -->
     <img src="images/TASL.jpg" 
          alt="Affective Science Lab Logo" 
-         class="me-3" 
-         style="width:150px; height:auto;">
-    
-    <!-- Right: Card text -->
+         class="me-3 lab-logo">
     <div>
       <h4 class="card-title">The Affective Science Lab</h4>
       <h6 class="card-subtitle mb-2 text-muted">Department of Psychology</h6>
@@ -36,16 +31,14 @@ I welcome inquiries about research collaborations, invited talks, and student me
       </p>
       <a href="https://affectivesciencelab.com/contact" class="card-link">Contact us!</a>
     </div>
-    
   </div>
 </div>
 
-<div class="card mb-4">
+<div class="lab-card card mb-4">
   <div class="card-body d-flex align-items-start">
     <img src="images/SNH.jpg" 
          alt="Social Neuroscience Lab Logo" 
-         class="me-3" 
-         style="width:150px; height:auto;">
+         class="me-3 lab-logo">
     <div>
       <h4 class="card-title">The Social Neuroscience and Health Lab</h4>
       <h6 class="card-subtitle mb-2 text-muted">Department of Psychology</h6>
@@ -70,3 +63,16 @@ I welcome inquiries about research collaborations, invited talks, and student me
 - <i class="bi bi-openai"></i> [Open Science Framework](https://osf.io/m324r/)
 - <i class="bi bi-r-square-fill"></i> [ResearchGate](https://www.researchgate.net/profile/Mallory-Feldman/publications)
 - <i class="bi bi-github"></i> [GitHub](https://github.com/MalloryJfeldman)
+
+```{=html}
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  document.querySelectorAll('a[href^="http"]').forEach(function(link) {
+    if (!link.hostname.includes(window.location.hostname)) {
+      link.setAttribute("target", "_blank");
+      link.setAttribute("rel", "noopener");
+    }
+  });
+});
+</script>
+```

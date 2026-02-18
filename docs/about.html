@@ -148,14 +148,28 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<div class="spotlight-container">
+<div class="spotlight-image">
+<p><img src="./images/profile.jpg" class="img-fluid" alt="Profile picture."></p>
+</div>
+<div class="spotlight-text">
 <p>I am a postdoctoral scholar at The Ohio State University, where I work in the <a href="https://affectivesciencelab.com">Affective Science Laboratory</a>. I’m also an active member of the <a href="https://carolinasnhlab.com">Social Neuroscience and Health Laboratory</a> at the University of North Carolina at Chapel Hill.</p>
 <p>My research program investigates how people sense and make sense of their bodies, with implications for health and social functioning across the lifespan. I study questions such as: How does the brain represent information from the body? How do cultural context and life experience shape how we access bodily signals? How do people use information from their bodies to evaluate themselves (“How do I feel?”) and others (“Are you trustworthy?”)?</p>
 <p>To address these questions, I draw on interdisciplinary theory from psychology, biology, and human development, and I use methods from experimental social psychology and psychophysiology. I have extensive training in autonomic psychophysiology and its implementation in lab-based, neuroimaging, and real-world settings (including EMA and mobile health telemetry). More recently, my work has expanded to incorporate structural and functional MRI as well as approaches from immunology.</p>
 <p>Outside of research, I enjoy running, reading, crafting, and spending time outdoors with my husband, son, and dog, Mylo.</p>
-<!-- Horizontal Banner Image -->
-<div class="about-banner">
-<p><img src="images/20260216-MalloryHeadshots-4911.jpg" class="img-fluid about-banner-img" alt="..."></p>
+<p><a href="./research.html">Learn more about my research →</a></p>
 </div>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  document.querySelectorAll('a[href^="http"]').forEach(function(link) {
+    if (!link.hostname.includes(window.location.hostname)) {
+      link.setAttribute("target", "_blank");
+      link.setAttribute("rel", "noopener");
+    }
+  });
+});
+</script>
 
 
 
@@ -564,13 +578,9 @@ ul.task-list li input[type="checkbox"] {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>© 2026 Mallory J. Feldman<br>
-Built with <a href="https://quarto.org">Quarto</a></p>
+<p>© 2026 Mallory J. Feldman ; Built with <a href="https://quarto.org">Quarto</a></p>
 </div>   
     <div class="nav-footer-center">
-      &nbsp;
-    </div>
-    <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">
     <a class="nav-link" href="https://scholar.google.com/scholar?as_sdt=0%2C14&amp;btnG=&amp;hl=en&amp;q=Mallory%20Feldman">
@@ -613,6 +623,20 @@ Built with <a href="https://quarto.org">Quarto</a></p>
       <i class="bi bi-linkedin" role="img" aria-label="LinkedIn">
 </i> 
     </a>
+  </li>  
+</ul>
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="./footer/commitments.html">
+<p>Commitments</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="./footer/license.html">
+<p>License</p>
+</a>
   </li>  
 </ul>
     </div>
