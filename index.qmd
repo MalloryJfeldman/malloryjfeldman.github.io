@@ -10,11 +10,11 @@ I'll be on the academic job market in 2026, looking for a tenure-track assistant
 
 ::: spotlight-container
 ::: spotlight-image
-![](./images/SometimesWeDance.jpg){.hero fig-alt="Profile picture." width="300" fig-cap="Sometimes We Dance by [Hanna Lee Joshi](https://hannaleejoshi.com/)"}
+[![Sometimes We Dance by Hanna Lee Joshi](./images/SometimesWeDance.jpg){.hero fig-alt="Artwork depicting three abstract women." width="300"}](https://hannaleejoshi.com/)
 :::
 
 ::: spotlight-text
-**I am a postdoctoral scholar at The Ohio State University** & a member of both the [Affective Science Lab](https://affectivesciencelab.com/) & the [Social Neuroscience and Health Lab](https://carolinasnhlab.com/). I study how people sense and make sense of their bodies with implications for human health & social functioning across the lifespan.
+**I am a postdoctoral scholar in Psychology and Neuroscience at The Ohio State University** & a member of both the [Affective Science Lab](https://affectivesciencelab.com/) & the [Social Neuroscience and Health Lab](https://carolinasnhlab.com/). I study how people sense and make sense of their bodies with implications for human health & social functioning across the lifespan.
 
 [Learn more about me →](about.qmd)
 :::
