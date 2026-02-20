@@ -1,78 +1,66 @@
 ---
-title: "Get in Touch"
-output: 
-  html_document:
-    theme:
-      bootswatch: cosmo
-css: styles.css
+title: "Contact"
+format:
+  html:
+    css: styles.css
+about:
+  template: marquee
+  links:
+    - href: https://scholar.google.com/scholar?as_sdt=0%2C14&btnG=&hl=en&q=Mallory%20Feldman 
+      icon: "google"       # Google Scholar
+      text: "Google Scholar"
+    - href: https://orcid.org/0000-0003-1051-2088
+      icon: "info-circle-fill" # ORCID
+      text: "ORCID"
+    - href: https://www.researchgate.net/profile/Mallory-Feldman/publications
+      icon: "r-square-fill" # ORCID
+      text: "ResearchGate"
+    - href: https://github.com/MalloryJfeldman
+      icon: "github" # ORCID
+      text: "GitHub"
+    - href: https://osf.io/m324r/
+      icon: "openai"
+      text: OSF
+    - href: https://bsky.app/profile/malloryjfeldman.bsky.social 
+      icon: "bluesky"         # Bluesky (use a bird icon)
+      text: BlueSky
+    - href: https://www.linkedin.com/in/malloryjfeldman/
+      icon: "linkedin"     # LinkedIn
+      text: LinkedIn
+    # (additional links excluded for brevity)
 ---
 
-I welcome inquiries about research collaborations, invited talks, and student mentorship.
+I welcome any inquiries about research collaborations, invited talks, and student mentorship.
+I can be reached at [feldman.380@osu.edu](mailto:feldman.380@osu.edu){.contact-item}.
 
-### Email
+---
 
-<a href="mailto:feldman.380@osu.edu" class="contact-item"> <i class="bi bi-envelope"></i> feldman.380[at]osu.edu </a>
+::: {.contact-card style="display: flex; align-items: center; gap: 1rem; padding: 1rem; border: 0px solid #ddd; border-radius: 8px;"}
+![](images/TASL.jpg){.contact-image style="width:120px; height:auto;"}
 
-### Offices
+::: {.contact-text}
+### The Affective Science Laboratory
+Department of Psychology<br>
+121 A, E, H Lazenby Hall<br>
+The Ohio State University<br>
+1827 Neil Ave, Columbus, OH 43210
 
-```{=html}
-<div class="lab-card card mb-4">
-  <div class="card-body d-flex align-items-start">
-    <img src="images/TASL.jpg" 
-         alt="Affective Science Lab Logo" 
-         class="me-3 lab-logo">
-    <div>
-      <h4 class="card-title">The Affective Science Lab</h4>
-      <h6 class="card-subtitle mb-2 text-muted">Department of Psychology</h6>
-      <p class="card-text">
-        121 A, E, H Lazenby Hall<br>
-        The Ohio State University<br>
-        1827 Neil Ave, Columbus, OH 43210
-      </p>
-      <a href="https://affectivesciencelab.com/contact" class="card-link">Contact us!</a>
-    </div>
-  </div>
-</div>
+[Contact us →](https://affectivesciencelab.com/contact)
+:::
+:::
 
-<div class="lab-card card mb-4">
-  <div class="card-body d-flex align-items-start">
-    <img src="images/SNH.jpg" 
-         alt="Social Neuroscience Lab Logo" 
-         class="me-3 lab-logo">
-    <div>
-      <h4 class="card-title">The Social Neuroscience and Health Lab</h4>
-      <h6 class="card-subtitle mb-2 text-muted">Department of Psychology</h6>
-      <p class="card-text">
-        10A Howell Hall<br>
-        The University of North Carolina at Chapel Hill<br>
-        235 E. Cameron Ave, Chapel Hill, NC 27599
-      </p>
-      <a href="https://carolinasnhlab.com/contact" class="card-link">Contact us!</a>
-    </div>
-  </div>
-</div>
+::: {.contact-card style="display: flex; align-items: center; gap: 1rem; padding: 1rem; border: 0px solid #ddd; border-radius: 8px;"}
+![](images/SNH.jpg){.contact-image style="width:120px; height:auto;"}
 
-```
+::: {.contact-text}
+### The Social Neuroscience and Health Laboratory
+Department of Psychology<br>
+10A Howell Hall<br>
+The University of North Carolina at Chapel Hill<br>
+235 E. Cameron Ave, Chapel Hill, NC 27599
 
-### Follow me
+[Contact us →](https://carolinasnhlab.com/contact)
+:::
+:::
 
-- <i class="bi bi-bluesky me-1"></i> [BlueSky](https://bsky.app/profile/malloryjfeldman.bsky.social)
-- <i class="bi bi-linkedin me-1"></i> [LinkedIn](https://www.linkedin.com/in/malloryjfeldman/)
-- <i class="bi bi-google me-1"></i> [Google Scholar](https://scholar.google.com/scholar?as_sdt=0%2C14&btnG=&hl=en&q=Mallory%20Feldman)
-- <i class="bi bi-info-circle-fill me-1"></i> [ORCID](https://orcid.org/0000-0003-1051-2088)
-- <i class="bi bi-openai"></i> [Open Science Framework](https://osf.io/m324r/)
-- <i class="bi bi-r-square-fill"></i> [ResearchGate](https://www.researchgate.net/profile/Mallory-Feldman/publications)
-- <i class="bi bi-github"></i> [GitHub](https://github.com/MalloryJfeldman)
-
-```{=html}
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  document.querySelectorAll('a[href^="http"]').forEach(function(link) {
-    if (!link.hostname.includes(window.location.hostname)) {
-      link.setAttribute("target", "_blank");
-      link.setAttribute("rel", "noopener");
-    }
-  });
-});
-</script>
-```
+---

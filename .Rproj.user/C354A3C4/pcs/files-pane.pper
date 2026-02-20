@@ -2,8 +2,8 @@
     "sortOrder": [
         {
             "columnIndex": 2,
-            "ascending": true
+            "ascending": false
         }
     ],
-    "path": "~/Desktop/mallory-website/footer"
+    "path": "~/Desktop/mallory-website"
 }

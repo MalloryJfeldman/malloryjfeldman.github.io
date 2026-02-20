@@ -1,0 +1,42 @@
+---
+title: "About Me"
+output: 
+  html_document:
+    theme:
+      bootswatch: cosmo
+css: styles.css
+---
+
+::: spotlight-container
+::: spotlight-image
+![](./images/profile2.jpg){fig-alt="Profile picture."}
+:::
+
+::: spotlight-text
+
+I am a postdoctoral scholar at The Ohio State University, where I work in the Affective Science Laboratory. I’m also an active member of the Social Neuroscience and Health Laboratory at the University of North Carolina at Chapel Hill.
+
+**My research program investigates how people sense and make sense of their bodies, with implications for health and social functioning across the lifespan.** 
+
+Research addresses questions like: How does the brain represent information from the body? How do cultural context and life experience shape how we access bodily signals? How do people use information from their bodies to evaluate themselves (“How do I feel?”) and others (“Are you trustworthy?”)?
+
+I draw on interdisciplinary theory from psychology, biology, and human development, and  methods from experimental social psychology and psychophysiology. I have extensive training in autonomic psychophysiology and its implementation in lab-based, neuroimaging, and real-world settings (including EMA and mobile health telemetry). More recently, my work has expanded to incorporate structural and functional MRI as well as approaches from immunology.
+
+Outside of research, I enjoy running, reading, crafting, and spending time outdoors with family.
+
+[Learn more about my research →](research.qmd)
+
+:::
+:::
+```{=html}
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  document.querySelectorAll('a[href^="http"]').forEach(function(link) {
+    if (!link.hostname.includes(window.location.hostname)) {
+      link.setAttribute("target", "_blank");
+      link.setAttribute("rel", "noopener");
+    }
+  });
+});
+</script>
+```

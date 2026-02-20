@@ -37,10 +37,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-4d9afe2b8d18ee9fa5d0d57b5ed4214d.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-5b4ad623e5705c0698d39aec6f10cf02.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-07c0448b09df5633f7879348f5e50994.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-07c0448b09df5633f7879348f5e50994.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-07c0448b09df5633f7879348f5e50994.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -80,6 +84,10 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../images/heart copy.png" alt="" class="navbar-logo light-content">
+    <img src="../images/heart copy.png" alt="" class="navbar-logo dark-content">
+    </a>
     <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">MALLORY J FELDMAN</span>
     </a>
@@ -95,20 +103,12 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">HOME</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../about.html"> 
-<span class="menu-text">ABOUT</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link" href="../research.html"> 
 <span class="menu-text">RESEARCH</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../publications.html"> 
 <span class="menu-text">PUBLICATIONS</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../curriculum vitae.html"> 
-<span class="menu-text">CV</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../contact.html"> 
@@ -240,6 +240,11 @@ ul.task-list li input[type="checkbox"] {
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
         }
       }
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
@@ -557,53 +562,10 @@ ul.task-list li input[type="checkbox"] {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>© 2026 Mallory J. Feldman ; Built with <a href="https://quarto.org">Quarto</a></p>
+<p>© 2026 Mallory J. Feldman</p>
 </div>   
     <div class="nav-footer-center">
-      <ul class="footer-items list-unstyled">
-    <li class="nav-item compact">
-    <a class="nav-link" href="https://scholar.google.com/scholar?as_sdt=0%2C14&amp;btnG=&amp;hl=en&amp;q=Mallory%20Feldman">
-      <i class="bi bi-google" role="img" aria-label="Google Scholar">
-</i> 
-    </a>
-  </li>  
-    <li class="nav-item compact">
-    <a class="nav-link" href="https://orcid.org/0000-0003-1051-2088">
-      <i class="bi bi-info-circle-fill" role="img" aria-label="ORCID">
-</i> 
-    </a>
-  </li>  
-    <li class="nav-item compact">
-    <a class="nav-link" href="https://www.researchgate.net/profile/Mallory-Feldman/publications">
-      <i class="bi bi-r-square-fill" role="img" aria-label="ResearchGate">
-</i> 
-    </a>
-  </li>  
-    <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/MalloryJfeldman">
-      <i class="bi bi-github" role="img" aria-label="GitHub">
-</i> 
-    </a>
-  </li>  
-    <li class="nav-item compact">
-    <a class="nav-link" href="https://osf.io/m324r/">
-      <i class="bi bi-openai" role="img" aria-label="OSF">
-</i> 
-    </a>
-  </li>  
-    <li class="nav-item compact">
-    <a class="nav-link" href="https://bsky.app/profile/malloryjfeldman.bsky.social">
-      <i class="bi bi-bluesky" role="img" aria-label="BlueSky">
-</i> 
-    </a>
-  </li>  
-    <li class="nav-item compact">
-    <a class="nav-link" href="https://www.linkedin.com/in/malloryjfeldman/">
-      <i class="bi bi-linkedin" role="img" aria-label="LinkedIn">
-</i> 
-    </a>
-  </li>  
-</ul>
+      &nbsp;
     </div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
@@ -615,6 +577,11 @@ ul.task-list li input[type="checkbox"] {
     <li class="nav-item">
     <a class="nav-link" href="../footer/license.html">
 <p>License</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../footer/acknowledgements.html">
+<p>Acknowledgements</p>
 </a>
   </li>  
 </ul>

@@ -1,0 +1,8 @@
+---
+title: "Acknowledgements"
+output: 
+  html_document:
+css: styles.css
+---
+
+Thank you to Angus Finlay, Rich Feldman, and Kristen Lindquist for providing feedback on the contents of this website.

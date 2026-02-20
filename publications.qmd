@@ -1,6 +1,5 @@
 ---
-pagetitle: "Mallory J. Feldman, PhD"
-toc: false
+title: "Publications"
 bibliography: publications/papers.bib
 csl: publications/apa.csl
 nocite: |
@@ -79,8 +78,8 @@ all_keywords <- rows %>% pull(keywords) %>% unlist() %>% unique() %>% sort()
 sidebar <- tags$div(
   id="keyword-sidebar", class="sidebar", style="position:fixed; top:100px; right:20px; width:180px; max-height:80vh; overflow-y:auto; border:1px solid #ddd; border-radius:8px; padding:12px; background:#fafafa;",
   tags$h4("Filter by keyword"),
-  tags$div(class="keyword-item", style="cursor:pointer; padding:4px 0; font-weight:600; color:#0b66c3;", `data-keyword`="ALL", "Show All"),
-  lapply(all_keywords, function(kw) tags$div(class="keyword-item", style="cursor:pointer; padding:2px 0; font-size:0.9rem; color:#0b66c3;", `data-keyword`=kw, kw))
+  tags$div(class="keyword-item", style="cursor:pointer; padding:4px 0; font-weight:600; color:black;", `data-keyword`="ALL", "Show All"),
+  lapply(all_keywords, function(kw) tags$div(class="keyword-item", style="cursor:pointer; padding:2px 0; font-size:0.9rem; color:black;", `data-keyword`=kw, kw))
 )
 ```
 
@@ -180,7 +179,7 @@ document.addEventListener("DOMContentLoaded", function() {
 .pub-title a{text-decoration:none;}
 .pub-meta{color:#555;font-size:0.95rem;margin-bottom:8px;}
 .pub-actions{display:flex;flex-wrap:wrap;gap:8px 14px;margin-top:8px;margin-bottom:8px;}
-.pub-actions a{text-decoration:none;font-size:0.92rem;border-bottom:1px dotted #999;color:#0b66c3;cursor:pointer;}
+.pub-actions a{text-decoration:none;font-size:0.92rem;border-bottom:1px dotted #999;color:black;cursor:pointer;}
 .pub-actions a.external{border-bottom-style:solid;}
 .toggle-area{display:none;position:relative;border:1px solid #000;border-radius:10px;padding:12px 44px 12px 12px;background:#fafafa;margin-top:10px;overflow:auto;}
 .toggle-area .panel-label{font-size:0.82rem;color:#333;font-weight:600;text-transform:uppercase;letter-spacing:0.03em;opacity:0.85;margin-bottom:6px;}

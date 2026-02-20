@@ -28,5 +28,14 @@
   },
   "footer/license.qmd": {
     "license.html": "134b02c3"
+  },
+  "footer/acknowledgements.qmd": {
+    "acknowledgements.html": "6589f3ef"
+  },
+  "archived/curriculum vitae.qmd": {
+    "curriculum vitae.html": "afb5fe09"
+  },
+  "archived/about.qmd": {
+    "about.html": "1e6a3c73"
   }
 }

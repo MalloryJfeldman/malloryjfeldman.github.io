@@ -1,22 +1,40 @@
 ---
 title: "Mallory J. Feldman, PhD"
-output: html_document
-css: styles.css
+image: images/profile.jpg
+about:
+  image-width: 18em
+  template: jolla
+  links:
+    - href: https://scholar.google.com/scholar?as_sdt=0%2C14&btnG=&hl=en&q=Mallory%20Feldman 
+      icon: "google"       # Google Scholar
+      text: "Google Scholar"
+    - href: https://orcid.org/0000-0003-1051-2088
+      icon: "info-circle-fill" # ORCID
+      text: "ORCID"
+    - href: https://www.researchgate.net/profile/Mallory-Feldman/publications
+      icon: "r-square-fill" # ORCID
+      text: "ResearchGate"
+    - href: https://github.com/MalloryJfeldman
+      icon: "github" # ORCID
+      text: "GitHub"
+    - href: https://osf.io/m324r/
+      icon: "openai"
+      text: OSF
+    - href: https://bsky.app/profile/malloryjfeldman.bsky.social 
+      icon: "bluesky"         # Bluesky (use a bird icon)
+      text: BlueSky
+    - href: https://www.linkedin.com/in/malloryjfeldman/
+      icon: "linkedin"     # LinkedIn
+      text: LinkedIn
+    # (additional links excluded for brevity)
 ---
-
-::: callout-note
-I'll be on the academic job market in 2026, looking for a tenure-track assistant professorship.
-:::
 
 ::: spotlight-container
 ::: spotlight-image
-[![Sometimes We Dance by Hanna Lee Joshi](./images/SometimesWeDance.jpg){.hero fig-alt="Artwork depicting three abstract women." width="300"}](https://hannaleejoshi.com/)
-:::
+**I am a postdoctoral scholar in Psychology and Neuroscience at The Ohio State University** and a member of both the [Affective Science Lab](https://affectivesciencelab.com/) and the [Social Neuroscience and Health Lab](https://carolinasnhlab.com/). I study how people sense and make sense of their bodies with implications for human health and social functioning across the lifespan.
 
-::: spotlight-text
-**I am a postdoctoral scholar in Psychology and Neuroscience at The Ohio State University** & a member of both the [Affective Science Lab](https://affectivesciencelab.com/) & the [Social Neuroscience and Health Lab](https://carolinasnhlab.com/). I study how people sense and make sense of their bodies with implications for human health & social functioning across the lifespan.
-
-[Learn more about me →](about.qmd)
+\
+[Download my curriculum vitae →](https://docs.google.com/document/d/1MTehANlERjCk7fYqt_nXaR1tqve-KHZMiuJreNzapuI/edit?tab=t.0)
 :::
 :::
 

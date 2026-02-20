@@ -1,0 +1,16 @@
+color:
+  background: white
+  foreground: blue
+
+typography:
+  fonts:
+    - family: Open Sans
+      source: google
+  base: Open Sans
+  headings: Open Sans
+
+  link:
+    color: "#16324f"
+
+logo:
+  medium: ./images/heart copy.png
