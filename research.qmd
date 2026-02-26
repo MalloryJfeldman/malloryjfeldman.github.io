@@ -7,7 +7,7 @@ format:
 
 ::: {.research-card}
 
-![](images/HannaLeeJoshi_Ajuma.jpg){.research-image alt="Artwork depicting body-brain interaction"}
+![](images/point.png){.research-image alt="Bullet point"}
 
 ::: {.research-text}
 ### Eavesdropping on conversations between body and brain
@@ -20,7 +20,7 @@ All day, every day, our brains are bombarded with sensations. These sensations c
 
 ::: {.research-card}
 
-![](images/HannaLeeJoshi_SunMoonandFire.jpg){.research-image alt="Artwork depicting body-brain interaction"}
+![](images/point.png){.research-image alt="Bullet point"}
 
 ::: {.research-text}
 ### Exploring individual differences in body perception
@@ -33,7 +33,7 @@ People differ in their interoceptive perceptual traits, for example, their inter
 
 ::: {.research-card}
 
-![](images/HannaLeeJoshi_SometimesWeDance.jpg){.research-image alt="Artwork depicting body-brain interaction"}
+![](images/point.png){.research-image alt="Bullet point"}
 
 ::: {.research-text}
 ### Unpacking the body’s role in social cognition
@@ -42,7 +42,3 @@ Our bodies don’t just shape how we feel about ourselves — they shape how we 
 :::
 
 :::
-
-
-All artwork on this page is by [Hanna Lee
-Joshi](https://hannaleejoshi.com/).
