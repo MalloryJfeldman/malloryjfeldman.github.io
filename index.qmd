@@ -29,14 +29,14 @@ about:
     # (additional links excluded for brevity)
 ---
 
-::: spotlight-container
+:::: spotlight-container
 ::: spotlight-image
 **I am a postdoctoral scholar in Psychology and Neuroscience at The Ohio State University** and a member of both the [Affective Science Lab](https://affectivesciencelab.com/) and the [Social Neuroscience and Health Lab](https://carolinasnhlab.com/). I study how people sense and make sense of their bodies with implications for human health and social functioning across the lifespan.
 
 \
 [Download my curriculum vitae →](https://docs.google.com/document/d/1MTehANlERjCk7fYqt_nXaR1tqve-KHZMiuJreNzapuI/edit?tab=t.0)
 :::
-:::
+::::
 
 ```{=html}
 <script>
