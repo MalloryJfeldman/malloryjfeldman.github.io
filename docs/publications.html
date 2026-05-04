@@ -169,20 +169,36 @@ div.csl-indent {
 
 <p>This page lists all my published works, organized by year. Click a paper’s title to visit the publisher page. Use <code>Abstract</code> to reveal the summary, and <code>Citation</code> for the APA 7th-edition reference.<span style="font-size:0.9rem; opacity:0.8;">* = co-first authorship</span></p>
 <p>Code adapted from <a href="https://affcom.ku.edu/research.html">Jeffrey Girard</a>.</p>
-<!-- KEYWORD FILTER SCRIPT: hides on mobile too -->
+<!-- KEYWORD FILTER SCRIPT -->
 <script>
 document.addEventListener("DOMContentLoaded",function(){
+  const select=document.getElementById('keyword-select');
+  const countEl=document.getElementById('kw-count');
   const cards=Array.from(document.querySelectorAll('.pub-card'));
-  const items=Array.from(document.querySelectorAll('.keyword-item'));
-  // Hide sidebar on mobile
-  if(window.innerWidth<=768){
-    const sidebar=document.getElementById('keyword-sidebar'); if(sidebar) sidebar.style.display='none';
-    return;
+  const yearGroups=Array.from(document.querySelectorAll('.year-group'));
+
+  function updateCount(visible){
+    countEl.textContent = visible < cards.length ? visible + " of " + cards.length + " papers" : "";
   }
-  items.forEach(item=>item.addEventListener('click',()=>{
-    const kw=item.getAttribute('data-keyword');
-    cards.forEach(card=>card.style.display=(kw==="ALL")?"block":(card.getAttribute('data-keywords')||"").split("||").includes(kw)?"block":"none");
-  }));
+
+  function applyFilter(){
+    const kw=select.value;
+    let visible=0;
+    cards.forEach(card=>{
+      const match=(kw==="ALL")||(card.getAttribute('data-keywords')||"").split("||").includes(kw);
+      card.style.display=match?"block":"none";
+      if(match) visible++;
+    });
+    // Hide year headings that have no visible cards
+    yearGroups.forEach(group=>{
+      const anyVisible=Array.from(group.querySelectorAll('.pub-card')).some(c=>c.style.display!=="none");
+      group.style.display=anyVisible?"block":"none";
+    });
+    updateCount(visible);
+  }
+
+  select.addEventListener('change', applyFilter);
+  updateCount(cards.length);
 });
 </script>
 
@@ -274,33 +290,35 @@ div#refs,div#refs + h1,div#refs + h2{display:none !important;}
 /* Mobile-specific adjustments for cards */
 @media(max-width:768px){
   .pub-card{flex-direction:column;width:100%;box-sizing:border-box;margin:12px 0;}
-  #keyword-sidebar{display:none !important;}
 }
 </style>
 </div>
 <div class="cell">
-<div class="cell-output-display">
+<div class="cell-output-display no-overflow-x">
 <div>
-<div id="keyword-sidebar" class="sidebar" style="position:fixed; top:100px; right:20px; width:180px; max-height:80vh; overflow-y:auto; border:1px solid #ddd; border-radius:8px; padding:12px; background:#fafafa;">
-<h4 class="anchored">Filter by keyword</h4>
-<div class="keyword-item" style="cursor:pointer; padding:4px 0; font-weight:600; color:black;" data-keyword="ALL">Show All</div>
-<div class="keyword-item" style="cursor:pointer; padding:2px 0; font-size:0.9rem; color:black;" data-keyword="Adolescent Development">Adolescent Development</div>
-<div class="keyword-item" style="cursor:pointer; padding:2px 0; font-size:0.9rem; color:black;" data-keyword="Adult Aging">Adult Aging</div>
-<div class="keyword-item" style="cursor:pointer; padding:2px 0; font-size:0.9rem; color:black;" data-keyword="Autonomic Physiology">Autonomic Physiology</div>
-<div class="keyword-item" style="cursor:pointer; padding:2px 0; font-size:0.9rem; color:black;" data-keyword="Emotional Experience">Emotional Experience</div>
-<div class="keyword-item" style="cursor:pointer; padding:2px 0; font-size:0.9rem; color:black;" data-keyword="Inflammation">Inflammation</div>
-<div class="keyword-item" style="cursor:pointer; padding:2px 0; font-size:0.9rem; color:black;" data-keyword="Interoception">Interoception</div>
-<div class="keyword-item" style="cursor:pointer; padding:2px 0; font-size:0.9rem; color:black;" data-keyword="Lifespan Development">Lifespan Development</div>
-<div class="keyword-item" style="cursor:pointer; padding:2px 0; font-size:0.9rem; color:black;" data-keyword="Neuroimaging">Neuroimaging</div>
-<div class="keyword-item" style="cursor:pointer; padding:2px 0; font-size:0.9rem; color:black;" data-keyword="Social Processes">Social Processes</div>
+<div id="keyword-filter-bar" style="margin-bottom:18px;">
+<label for="keyword-select" style="font-size:0.95rem; margin-right:8px; color:#555;">Filter by topic:</label>
+<select id="keyword-select" style="font-size:0.95rem; padding:5px 10px; border:1px solid #ddd; border-radius:8px; background:#fafafa; cursor:pointer;">
+<option value="ALL">All topics</option>
+<option value="Adolescent Development">Adolescent Development</option>
+<option value="Adult Aging">Adult Aging</option>
+<option value="Autonomic Physiology">Autonomic Physiology</option>
+<option value="Emotional Experience">Emotional Experience</option>
+<option value="Inflammation">Inflammation</option>
+<option value="Interoception">Interoception</option>
+<option value="Lifespan Development">Lifespan Development</option>
+<option value="Neuroimaging">Neuroimaging</option>
+<option value="Social Processes">Social Processes</option>
+</select>
+<span id="kw-count" style="margin-left:12px; font-size:0.88rem; color:#888;"></span>
 </div>
 <div>
 <div class="year-group">
 <h2 class="year-title anchored" id="y-2026">2026</h2>
 <div>
-<div class="pub-card" data-key="Frye2026EmotionalAttention" data-keywords="Emotional Experience||Adolescent Development||Neuroimaging">
+<div class="pub-card" data-key="frye_emotional_2026" data-keywords="Emotional Experience||Adolescent Development||Neuroimaging">
 <div class="pub-title">
-<a href="" target="_blank" rel="noopener">Emotional attention moderates the link between allostatic interoceptive network organization and depression in adolescents</a>
+<a href="https://doi.org/10.1007/s42761-025-00347-4" target="_blank" rel="noopener">Emotional Attention Moderates the Link between Allostatic-interoceptive System Organization and Depression in Adolescents</a>
 </div>
 <div class="pub-meta">
 Frye, Lin, Feldman, Prinstein, Cohen, Telzer &amp; Lindquist
@@ -318,7 +336,7 @@ Frye, Lin, Feldman, Prinstein, Cohen, Telzer &amp; Lindquist
 <div class="content"></div>
 </div>
 <div style="display:none;">
-<div class="payload-abstract">The onset of depression and depressive symptoms spikes during adolescence, and the prevalence of depression in adolescents appears to be increasing over time (Daly, 2022). In previous research, we found that greater integration of an allostatic interoceptive system (AIS), a brain system involved in the predictive regulation of the body, prospectively predicted more depressive symptoms in adolescents two years later, mediated by a greater tendency to ruminate (Frye et al., 2025). This pattern of brain organization may reflect excessive internal focus. Here, we examine the potential moderating effect of emotional awareness on the relationship between AIS integration and prospective depression symptoms. Specifically, using data from a larger longitudinal study of adolescents beginning in 6th -8th grade, we test whether trait emotional clarity or emotional attention moderates the relationship between AIS global efficiency during a resting-state fMRI scan and prospective depressive symptoms assessed an average of two years later (N = 117, 55% female, Minitial age= 12.99, Mage at follow−up= 14.74). We found that for adolescents who paid little attention to their emotions, greater AIS integration was related to lower prospective depressive symptoms, whereas for adolescents who paid above-average attention to their emotions, greater AIS integration was related to greater prospective depressive symptoms. These findings contribute to an emerging understanding of the role of the allostatic-interoceptive system in depression in adolescents by showing that the relationship between system integration and prospective depressive symptoms differs depending on adolescents’ emotional attention.</div>
+<div class="payload-abstract">The onset of depression and depressive symptoms spikes during adolescence, and the prevalence of depression in adolescents appears to be increasing over time (Daly, 2022). In previous research, we found that greater integration of an allostatic interoceptive system (AIS), a brain system involved in the predictive regulation of the body, prospectively predicted more depressive symptoms in adolescents two years later, mediated by a greater tendency to ruminate (Frye et al., 2025). This pattern of brain organization may reflect excessive internal focus. Here, we examine the potential moderating effect of emotional awareness on the relationship between AIS integration and prospective depression symptoms. Specifically, using data from a larger longitudinal study of adolescents beginning in 6th -8th grade, we test whether trait emotional clarity or emotional attention moderates the relationship between AIS global efficiency during a resting-state fMRI scan and prospective depressive symptoms assessed an average of two years later (N = 117, 55\% female, Minitial age= 12.99, Mage at follow−up= 14.74). We found that for adolescents who paid little attention to their emotions, greater AIS integration was related to lower prospective depressive symptoms, whereas for adolescents who paid above-average attention to their emotions, greater AIS integration was related to greater prospective depressive symptoms. These findings contribute to an emerging understanding of the role of the allostatic-interoceptive system in depression in adolescents by showing that the relationship between system integration and prospective depressive symptoms differs depending on adolescents’ emotional attention.</div>
 </div>
 </div>
 <div class="pub-card" data-key="Shipkova2026" data-keywords="Emotional Experience||Social Processes||Adolescent Development||Neuroimaging">
@@ -946,8 +964,8 @@ Feldman*, M. J., Capella*, J., Dai, J., Bonar, A. S., Field, N., Lewis, K., Prin
 <div id="ref-Field2025_popularity" class="csl-entry" role="listitem">
 Field, N. H., Balkind, E., Burnell, K., Fox, K. A., Feldman, M. J., Nick, E. A., Telzer, E. H., Lindquist, K. A., &amp; Prinstein, M. J. (2025). Popularity, but not likability, as a risk factor for low empathy: A longitudinal examination of within- and between-person effects of peer status and empathy in adolescence. <em>Developmental Psychology</em>, <em>61</em>(9), 1684–1697. <a href="https://doi.org/10.1037/dev0001914">https://doi.org/10.1037/dev0001914</a>
 </div>
-<div id="ref-Frye2026EmotionalAttention" class="csl-entry" role="listitem">
-Frye, N. G., Lin, Y., Feldman, M. J., Prinstein, M. J., Cohen, J. R., Telzer, E. H., &amp; Lindquist, K. A. (2026). Emotional attention moderates the link between allostatic interoceptive network organization and depression in adolescents [Journal Article]. <em>Affective Science</em>.
+<div id="ref-frye_emotional_2026" class="csl-entry" role="listitem">
+Frye, N. G., Lin, Y., Feldman, M. J., Prinstein, M. J., Cohen, J. R., Telzer, E. H., &amp; Lindquist, K. A. (2026). Emotional <span>Attention</span> <span>Moderates</span> the <span>Link</span> between <span>Allostatic</span>-interoceptive <span>System</span> <span>Organization</span> and <span>Depression</span> in <span>Adolescents</span>. <em>Affective Science</em>. <a href="https://doi.org/10.1007/s42761-025-00347-4">https://doi.org/10.1007/s42761-025-00347-4</a>
 </div>
 <div id="ref-Hoemann2020ExperienceSampling" class="csl-entry" role="listitem">
 Hoemann*, K., Khan*, Z., Feldman, M. J., Nielson, C., Devlin, M., Dy, J., Barrett, L. F., Wormwood, J. B., &amp; Quigley, K. S. (2020). Context-aware experience sampling reveals the scale of variation in affective experience. <em>Scientific Reports</em>, <em>10</em>(1), 12459. <a href="https://doi.org/10.1038/s41598-020-69180-y">https://doi.org/10.1038/s41598-020-69180-y</a>

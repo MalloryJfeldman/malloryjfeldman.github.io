@@ -72,32 +72,53 @@ rows <- tibble(key=keys, entry=lapply(keys, function(k) bib[k])) |>
   arrange(desc(year), title)
 
 # =========================================
-# BUILD KEYWORD SIDEBAR
+# BUILD KEYWORD DROPDOWN
 # =========================================
 all_keywords <- rows %>% pull(keywords) %>% unlist() %>% unique() %>% sort()
-sidebar <- tags$div(
-  id="keyword-sidebar", class="sidebar", style="position:fixed; top:100px; right:20px; width:180px; max-height:80vh; overflow-y:auto; border:1px solid #ddd; border-radius:8px; padding:12px; background:#fafafa;",
-  tags$h4("Filter by keyword"),
-  tags$div(class="keyword-item", style="cursor:pointer; padding:4px 0; font-weight:600; color:black;", `data-keyword`="ALL", "Show All"),
-  lapply(all_keywords, function(kw) tags$div(class="keyword-item", style="cursor:pointer; padding:2px 0; font-size:0.9rem; color:black;", `data-keyword`=kw, kw))
+keyword_dropdown <- tags$div(
+  id="keyword-filter-bar", style="margin-bottom:18px;",
+  tags$label(`for`="keyword-select", style="font-size:0.95rem; margin-right:8px; color:#555;", "Filter by topic:"),
+  tags$select(
+    id="keyword-select",
+    style="font-size:0.95rem; padding:5px 10px; border:1px solid #ddd; border-radius:8px; background:#fafafa; cursor:pointer;",
+    tags$option(value="ALL", "All topics"),
+    lapply(all_keywords, function(kw) tags$option(value=kw, kw))
+  ),
+  tags$span(id="kw-count", style="margin-left:12px; font-size:0.88rem; color:#888;")
 )
 ```
 
 ```{=html}
-<!-- KEYWORD FILTER SCRIPT: hides on mobile too -->
+<!-- KEYWORD FILTER SCRIPT -->
 <script>
 document.addEventListener("DOMContentLoaded",function(){
+  const select=document.getElementById('keyword-select');
+  const countEl=document.getElementById('kw-count');
   const cards=Array.from(document.querySelectorAll('.pub-card'));
-  const items=Array.from(document.querySelectorAll('.keyword-item'));
-  // Hide sidebar on mobile
-  if(window.innerWidth<=768){
-    const sidebar=document.getElementById('keyword-sidebar'); if(sidebar) sidebar.style.display='none';
-    return;
+  const yearGroups=Array.from(document.querySelectorAll('.year-group'));
+
+  function updateCount(visible){
+    countEl.textContent = visible < cards.length ? visible + " of " + cards.length + " papers" : "";
   }
-  items.forEach(item=>item.addEventListener('click',()=>{
-    const kw=item.getAttribute('data-keyword');
-    cards.forEach(card=>card.style.display=(kw==="ALL")?"block":(card.getAttribute('data-keywords')||"").split("||").includes(kw)?"block":"none");
-  }));
+
+  function applyFilter(){
+    const kw=select.value;
+    let visible=0;
+    cards.forEach(card=>{
+      const match=(kw==="ALL")||(card.getAttribute('data-keywords')||"").split("||").includes(kw);
+      card.style.display=match?"block":"none";
+      if(match) visible++;
+    });
+    // Hide year headings that have no visible cards
+    yearGroups.forEach(group=>{
+      const anyVisible=Array.from(group.querySelectorAll('.pub-card')).some(c=>c.style.display!=="none");
+      group.style.display=anyVisible?"block":"none";
+    });
+    updateCount(visible);
+  }
+
+  select.addEventListener('change', applyFilter);
+  updateCount(cards.length);
 });
 </script>
 
@@ -190,7 +211,6 @@ div#refs,div#refs + h1,div#refs + h2{display:none !important;}
 /* Mobile-specific adjustments for cards */
 @media(max-width:768px){
   .pub-card{flex-direction:column;width:100%;box-sizing:border-box;margin:12px 0;}
-  #keyword-sidebar{display:none !important;}
 }
 ```
 
@@ -215,7 +235,7 @@ groups <- lapply(years,function(y){
   tags$div(class="year-group", tags$h2(class="year-title anchored", id=paste0("y-",y), str_to_title(y)), tags$div(cards))
 })
 
-browsable(tags$div(sidebar, tags$div(groups)))
+browsable(tags$div(keyword_dropdown, tags$div(groups)))
 
 ```
 

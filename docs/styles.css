@@ -1,3 +1,4 @@
+
 /* ===== Spotlight Layout ===== */
 .spotlight-container {
   display: grid;
@@ -114,63 +115,3 @@
   }
 }
 
-
-/* ===== Keyword Sidebar ===== */
-#keyword-sidebar {
-  position: fixed;
-  top: 80px;                        /* clears the Quarto navbar */
-  right: 20px;
-  width: 175px;
-  max-height: calc(100vh - 100px);  /* never taller than the viewport */
-  overflow-y: auto;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 12px;
-  background: #fafafa;
-  z-index: 100;                     /* above cards, below any modals */
-  /* Subtle shadow so it reads as floating */
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-}
-
-/* Smooth scrollbar for the sidebar itself */
-#keyword-sidebar::-webkit-scrollbar {
-  width: 4px;
-}
-#keyword-sidebar::-webkit-scrollbar-thumb {
-  background: #ccc;
-  border-radius: 4px;
-}
-
-/* ── Individual keyword items ── */
-.keyword-item {
-  cursor: pointer;
-  padding: 4px 6px;
-  font-size: 0.88rem;
-  border-radius: 4px;
-  color: #333;
-  margin-bottom: 2px;
-  border-left: 3px solid transparent;  /* reserve space so text doesn't jump */
-  transition: color 0.15s, border-color 0.15s, font-weight 0.1s;
-  line-height: 1.4;
-}
-
-.keyword-item:hover {
-  color: #2563eb;
-  background: #eff6ff;
-}
-
-/* Active (selected) keyword */
-.keyword-item.active {
-  font-weight: 700;
-  color: #2563eb;
-  border-left-color: #2563eb;
-  background: #eff6ff;
-}
-
-/* "Show All" slightly larger */
-.keyword-item[data-keyword="ALL"] {
-  font-size: 0.92rem;
-  margin-bottom: 6px;
-  padding-bottom: 6px;
-  border-bottom: 1px solid #e5e7eb;
-}
