@@ -29,8 +29,6 @@ website:
         href: footer/commitments.qmd
       - text: "License"
         href: footer/license.qmd
-      - text: "Acknowledgements"
-        href: footer/acknowledgements.qmd
 
 format:
     html:
