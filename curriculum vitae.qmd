@@ -1,0 +1,13 @@
+---
+title: "Curriculum Vitae"
+format: html
+---
+
+[Click here to download](https://docs.google.com/document/d/1MTehANlERjCk7fYqt_nXaR1tqve-KHZMiuJreNzapuI/edit?usp=sharing)
+
+<iframe 
+  src="https://docs.google.com/document/d/e/2PACX-1vQF2fxSvvl_4LWlr5C_8L6-09UiUStJb0pj0MW_K4wzzJXMMedftV_sRFchy5eU5LrAa9kn5bmcMd8W/pub?embedded=true"
+  width="100%" 
+  height="900px" 
+  style="border: none;">
+</iframe>

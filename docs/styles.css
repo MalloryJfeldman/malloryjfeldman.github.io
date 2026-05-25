@@ -1,4 +1,3 @@
-
 /* ===== Spotlight Layout ===== */
 .spotlight-container {
   display: grid;
@@ -8,7 +7,6 @@
   margin-top: 2rem;
 }
 
-/* Image styling */
 .spotlight-image img {
   width: 100%;
   max-width: 240px;
@@ -16,13 +14,11 @@
   border-radius: 8px;
 }
 
-/* Text styling */
 .spotlight-text {
   font-size: 1.05rem;
   line-height: 1.7;
 }
 
-/* Mobile responsiveness for Spotlight */
 @media (max-width: 768px) {
   .spotlight-container {
     grid-template-columns: 1fr;
@@ -37,13 +33,14 @@
   }
 }
 
-/* ===== Research Cards ===== */
+
+/* ===== Research Cards (legacy, with image) ===== */
 .research-card {
   display: flex;
   align-items: flex-start;
   gap: 1rem;
   margin-bottom: 2rem;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
 }
 
 .research-card img {
@@ -58,7 +55,6 @@
   min-width: 200px;
 }
 
-/* Mobile styles for Research Cards */
 @media (max-width: 768px) {
   .research-page .research-card {
     flex-direction: column;
@@ -89,12 +85,101 @@
   }
 }
 
-/* Hide keyword sidebar on mobile */
+
+/* ===== Research Cards (sleek) ===== */
+.r-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-top: 1.5rem;
+}
+
+.r-card {
+  background: #fff;
+  border: 0.5px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1.5rem 1.75rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.r-card:hover {
+  border-color: #bbb;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.r-card-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 0.75rem;
+}
+
+.r-num {
+  font-size: 11px;
+  font-weight: 500;
+  color: #aaa;
+  letter-spacing: 0.08em;
+  padding-top: 4px;
+  min-width: 20px;
+}
+
+.r-card-header h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.r-body {
+  font-size: 0.92rem;
+  color: #555;
+  line-height: 1.7;
+  margin: 0 0 1rem 34px;
+}
+
+.r-card hr {
+  border: none;
+  border-top: 0.5px solid #e5e7eb;
+  margin: 0 0 0.75rem 34px;
+}
+
+.r-card strong {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.07em;
+  color: #aaa;
+  text-transform: uppercase;
+  display: block;
+  margin: 0 0 0.5rem 34px;
+}
+
+.r-card ul {
+  margin: 0 0 0 34px;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 0.875rem;
+}
+
+.r-card ul li em {
+  color: #aaa;
+}
+
 @media (max-width: 768px) {
-  #keyword-sidebar {
-    display: none !important;
+  .r-card {
+    padding: 1.25rem;
+  }
+
+  .r-body,
+  .r-card hr,
+  .r-card strong,
+  .r-card ul {
+    margin-left: 0;
   }
 }
+
 
 /* ===== Lab Cards ===== */
 .lab-logo {
@@ -104,9 +189,9 @@
 
 @media (max-width: 768px) {
   .lab-card .card-body {
-    flex-direction: column !important;  
-    align-items: center;                 
-    text-align: center;                  
+    flex-direction: column !important;
+    align-items: center;
+    text-align: center;
   }
 
   .lab-card .lab-logo {
@@ -115,3 +200,10 @@
   }
 }
 
+
+/* ===== Global Mobile ===== */
+@media (max-width: 768px) {
+  #keyword-sidebar {
+    display: none !important;
+  }
+}

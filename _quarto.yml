@@ -12,6 +12,8 @@ website:
         text: HOME
       - href: research.qmd
         text: RESEARCH
+      - href: curriculum vitae.qmd
+        text: CV
       - href: publications.qmd
         text: PUBLICATIONS
       - href: contact.qmd

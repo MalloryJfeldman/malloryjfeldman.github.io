@@ -5,40 +5,76 @@ format:
     css: styles.css
 ---
 
-::: {.research-card}
+::: {.r-grid}
 
-![](images/point.png){.research-image alt="Bullet point"}
+::: {.r-card}
+::: {.r-card-header}
+[01]{.r-num}
 
-::: {.research-text}
 ### Eavesdropping on conversations between body and brain
-
-All day, every day, our brains are bombarded with sensations. These sensations come from intuitive sources like our eyes and ears — but also from the tissues and systems of our bodies. Just as “vision” refers to the perception of light, “interoception” refers to the perception of signals from within the body. I study how people sense and make sense of their bodies. In particular, much of my work examines how interoception contributes to affective and emotional experience.
+:::
+::: {.r-body}
+All day, every day, our brains are bombarded with sensations. These sensations come from intuitive sources like our eyes and ears — but also from the tissues and systems of our bodies. Just as "vision" refers to the perception of light, "interoception" refers to the perception of signals from within the body. I study how people sense and make sense of their bodies. In particular, much of my work examines how interoception contributes to affective and emotional experience.
 :::
 
+```{=html}
+<hr style="border:none; border-top:0.5px solid #e5e7eb; margin: 0 0 0.75rem 34px;">
+<p style="font-size:11px; font-weight:500; letter-spacing:0.07em; color:#aaa; text-transform:uppercase; margin: 0 0 0.5rem 34px;">Representative publications</p>
+```
+
+- [The neurobiology of interoception and affect](https://doi.org/10.1016/j.tics.2024.01.009) *— Trends in Cognitive Sciences, 2024*
+- [The Role of Interoception in Emotion and Social Cognition](https://doi.org/10.1007/978-3-031-68521-7_5) *— Interoception: A Comprehensive Guide, 2024*
 :::
 
+::: {.r-card}
+::: {.r-card-header}
+[02]{.r-num}
 
-::: {.research-card}
-
-![](images/point.png){.research-image alt="Bullet point"}
-
-::: {.research-text}
 ### Exploring individual differences in body perception
-
+:::
+::: {.r-body}
 People differ in their interoceptive perceptual traits, for example, their interoceptive beliefs (e.g., beliefs about the efficacy or trustworthiness of bodily sensations), interoceptive attention (attention toward internal bodily sensations), and interoceptive accuracy (objective performance in detecting changes in peripheral physiology). I am especially interested in how interoception changes across the lifespan as a function of biological aging, identity, lived experience, and cultural context.
 :::
 
+```{=html}
+<hr style="border:none; border-top:0.5px solid #e5e7eb; margin: 0 0 0.75rem 34px;">
+<p style="font-size:11px; font-weight:500; letter-spacing:0.07em; color:#aaa; text-transform:uppercase; margin: 0 0 0.5rem 34px;">Representative publications</p>
+```
+
+- [Interoceptive ability moderates the effect of physiological reactivity on social judgment](https://doi.org/10.1037/emo0001210) *— Emotion, 2023*
+- [Aging Bodies, Brains, and Emotions: The Physiological Hypothesis of Emotional Aging](https://doi.org/10.1017/9781009209656.004) *— Cambridge University Press, 2023*
 :::
 
+::: {.r-card}
+::: {.r-card-header}
+[03]{.r-num}
 
-::: {.research-card}
+### Unpacking the body's role in social cognition
+:::
+::: {.r-body}
+Our bodies don't just shape how we feel about ourselves — they shape how we perceive and respond to the world around us. Food looks more appetizing when we're hungry and more nauseating when we're full. This same logic extends to social perception. For example, when people experience heightened inflammation, they may feel more threatened by strangers yet more motivated to connect with close others. I am interested in how the body serves to pattern social cognition.
+:::
 
-![](images/point.png){.research-image alt="Bullet point"}
+```{=html}
+<hr style="border:none; border-top:0.5px solid #e5e7eb; margin: 0 0 0.75rem 34px;">
+<p style="font-size:11px; font-weight:500; letter-spacing:0.07em; color:#aaa; text-transform:uppercase; margin: 0 0 0.5rem 34px;">Representative publications</p>
+```
 
-::: {.research-text}
-### Unpacking the body’s role in social cognition
-
-Our bodies don’t just shape how we feel about ourselves — they shape how we perceive and respond to the world around us. Food looks more appetizing when we’re hungry and more nauseating when we’re full. This same logic extends to social perception. For example, when people experience heightened inflammation, they may feel more threatened by strangers yet more motivated to connect with close others. I am interested how the body serves to pattern social cognition.
+- [The roles of inflammation, affect, and interoception in predicting social perception](https://doi.org/10.1016/j.bbi.2023.05.011) *— Brain, Behavior, and Immunity, 2023*
+- [Affect and Social Judgment: The Roles of Physiological Reactivity and Interoceptive Sensitivity](https://doi.org/10.1007/s42761-022-00114-9) *— Affective Science, 2022*
 :::
 
 :::
+
+```{=html}
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  document.querySelectorAll('a[href^="http"]').forEach(function(link) {
+    if (!link.hostname.includes(window.location.hostname)) {
+      link.setAttribute("target", "_blank");
+      link.setAttribute("rel", "noopener");
+    }
+  });
+});
+</script>
+```
