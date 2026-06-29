@@ -1,0 +1,13 @@
+---
+title: "Partnerships"
+---
+
+My research sits at the intersection of psychology, neuroscience, and human health — and the questions I care about don't stop at the lab door. I'm actively interested in partnerships with industry, clinical, and technology organizations whose work touches on how people sense, interpret, and respond to their bodies.
+
+Potential areas for collaboration include health technology development and evaluation, responsible AI in health and wellness contexts, translational research bringing social science and psychophysiology to applied settings, and advisory or consulting roles where cognitive, behavioral, and neuroscientific expertise adds value.
+
+I have a particular interest in wearable health technologies and how physiological data is collected, interpreted, and acted upon across clinical and everyday contexts — from fitness and general health tracking to reproductive health monitoring. How people understand and respond to the signals their bodies generate is central to my research, and I see meaningful opportunities to bring that science to bear on how these tools are designed and evaluated.
+
+If you're working on something at this intersection and think there might be a fit, I'd love to hear from you.
+
+[Get in touch →](contact.qmd)

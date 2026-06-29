@@ -16,6 +16,8 @@ website:
         text: CV
       - href: publications.qmd
         text: PUBLICATIONS
+      - href: partnerships.qmd
+        text: PARTNERSHIPS
       - href: contact.qmd
         text: CONTACT
       
