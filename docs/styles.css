@@ -207,3 +207,391 @@
     display: none !important;
   }
 }
+
+
+/* ============================================================
+   Visual identity v4 — homepage (index.qmd)
+   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;0,700;1,600&family=Karla:ital,wght@0,400;0,500;0,700;1,400&display=swap');
+
+:root {
+  --brand-navy: #2D3C59;
+  --brand-navy-deep: #202B41;
+  --brand-olive: #94A378;
+  --brand-olive-deep: #6C7A54;
+  --brand-gold: #E5BA41;
+  --brand-terracotta: #D1855C;
+  --brand-terracotta-deep: #8C4A2E;
+  --brand-cream: #FBF5DD;
+  --brand-paper: #FFFDF6;
+  --brand-line: #E6DCC2;
+  --brand-ink: #2D3C59;
+  --brand-ink-soft: #4A5266;
+  --brand-font-display: 'Fraunces', Georgia, 'Iowan Old Style', serif;
+  --brand-font-body: 'Karla', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+body {
+  font-family: var(--brand-font-body);
+  background: var(--brand-cream);
+  color: var(--brand-ink);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--brand-font-display);
+}
+
+/* Full-bleed sections use Quarto's built-in .column-screen utility class
+   (defined in the theme's own CSS) rather than a hand-rolled 100vw hack,
+   since Quarto's page-layout grid only recognizes its own column-* classes
+   on top-level blocks. */
+
+/* ===== Banner ===== */
+.banner {
+  overflow: hidden;
+  margin: 0 0 2.5rem;
+}
+.banner img {
+  width: 100% !important;
+  height: auto !important;
+  max-width: none !important;
+  display: block;
+}
+
+/* ===== Profile ===== */
+.profile-wrap {
+  margin: 1rem 0 3rem;
+}
+.profile-grid {
+  display: grid !important;
+  grid-template-columns: 340px 1fr;
+  gap: 3rem;
+  align-items: start !important;
+}
+.profile-grid > * {
+  min-width: 0;
+}
+.frame-block {
+  position: relative;
+  width: 100%;
+  max-width: 340px;
+  /* Explicit aspect ratio (the composited photo is ~1000x982) instead of
+     a height:100% img that depends on the parent having a definite height
+     -- percentage heights are unreliable on a grid item and could stretch
+     to match the taller column, leaving a large gap below. */
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 2px;
+}
+.frame-block img {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  display: block;
+  object-fit: cover;
+}
+/* Quarto wraps a heading like "# ... {.profile-name}" in an auto-generated
+   <section> that ALSO carries the .profile-name class, alongside the h1
+   itself. Scope to the h1 element specifically so the section wrapper
+   (which also contains the bio and CV link) isn't styled as a heading. */
+h1.profile-name {
+  font-family: var(--brand-font-display);
+  font-weight: 600;
+  font-size: 2.1rem;
+  margin: 0.25rem 0 1rem;
+  color: var(--brand-navy);
+}
+.profile-bio {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--brand-ink-soft);
+  max-width: 56ch;
+  margin: 0 0 1.4rem;
+}
+.profile-bio strong {
+  color: var(--brand-navy);
+  font-weight: 700;
+}
+.profile-cv {
+  display: inline-block;
+  font-family: var(--brand-font-body);
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--brand-navy) !important;
+  text-decoration: none !important;
+  border-bottom: 2px solid var(--brand-terracotta-deep);
+  padding-bottom: 3px;
+  margin-bottom: 0;
+}
+.profile-links-row {
+  grid-column: 1 / -1;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--brand-line);
+}
+.profile-links,
+.profile-links ul {
+  display: flex !important;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none !important;
+  margin: 0;
+  padding: 0;
+  font-family: var(--brand-font-body);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.profile-links li {
+  display: flex;
+  align-items: center;
+}
+.profile-links li:not(:last-child)::after {
+  content: "·";
+  color: var(--brand-terracotta-deep);
+  font-weight: 700;
+  margin: 0 0.75rem;
+  font-size: 1.1rem;
+}
+.profile-links a {
+  color: var(--brand-navy) !important;
+  text-decoration: none !important;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+}
+.profile-links a:hover,
+.profile-links a:focus-visible {
+  border-bottom-color: var(--brand-terracotta-deep);
+}
+
+/* ===== Sections ===== */
+.page-section {
+  padding: 3rem 0;
+}
+.section-alt {
+  /* No longer full-bleed itself -- left as a normal .page-columns > * child
+     so it lines up with the page's default body-content column, exactly
+     like every other section (including "Most recent publications"). The
+     paper background/border are painted on a full-bleed pseudo-element
+     instead, positioned relative to this (centered, normal-width) box. */
+  position: relative;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+.section-alt::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 100vw;
+  margin-left: -50vw;
+  background: var(--brand-paper);
+  border-top: 1px solid var(--brand-line);
+  border-bottom: 1px solid var(--brand-line);
+  z-index: -1;
+}
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+.section-head p,
+.section-head .section-title,
+.section-head > section {
+  margin: 0;
+}
+.section-label {
+  font-family: var(--brand-font-body);
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--brand-terracotta-deep);
+  margin: 0 0 0.6rem;
+}
+.section-title {
+  font-family: var(--brand-font-display);
+  font-weight: 600;
+  font-size: 1.7rem;
+  margin: 0;
+  color: var(--brand-navy);
+  /* Quarto's default article typography puts a border-bottom on every h2 --
+     override it, or the heading gets an unwanted short underline. */
+  border-bottom: none !important;
+  padding-bottom: 0 !important;
+}
+.section-link {
+  font-family: var(--brand-font-body);
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--brand-navy) !important;
+  text-decoration: none !important;
+  border-bottom: 2px solid var(--brand-olive-deep);
+  padding-bottom: 2px;
+  white-space: nowrap;
+}
+.section-link:hover,
+.section-link:focus-visible {
+  border-color: var(--brand-terracotta-deep);
+}
+
+/* ===== Research ===== */
+.research-list {
+  display: flex;
+  flex-direction: column;
+  max-width: 780px;
+}
+.research-block {
+  display: grid;
+  grid-template-columns: 6px 1fr;
+  column-gap: 2rem;
+  padding: 2.5rem 0;
+  border-top: 1px solid var(--brand-line);
+}
+/* The heading right above already reads as the section break -- a divider
+   line immediately under it as well felt redundant/awkward, so drop it
+   only on the first block; dividers still separate each block after that. */
+.research-list .research-block:first-child {
+  border-top: none;
+  padding-top: 1.25rem;
+}
+.research-list .research-block:last-child {
+  border-bottom: 1px solid var(--brand-line);
+}
+.research-accent {
+  border-radius: 3px;
+}
+.research-block h3 {
+  font-family: var(--brand-font-display);
+  font-weight: 600;
+  font-size: 1.35rem;
+  margin: 0 0 1rem;
+  color: var(--brand-navy);
+  max-width: 34ch;
+}
+.research-block p {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--brand-ink-soft);
+  max-width: 68ch;
+  margin: 0 0 0.9rem;
+}
+.research-block cite {
+  display: block;
+  font-family: var(--brand-font-body);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.78rem;
+  letter-spacing: 0.02em;
+  color: var(--brand-terracotta-deep);
+  margin-top: 0.4rem;
+}
+.research-block cite .cite-label {
+  font-weight: 500;
+  color: var(--brand-ink-soft);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.7rem;
+}
+.research-block cite a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+.research-block cite a:hover,
+.research-block cite a:focus-visible {
+  border-bottom-color: currentColor;
+}
+
+/* ===== Publications (most recent, on homepage) ===== */
+.pub-list {
+  display: flex;
+  flex-direction: column;
+}
+.pub-row {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  gap: 1.5rem;
+  padding: 1.35rem 0;
+  border-top: 1px solid var(--brand-line);
+  align-items: start;
+}
+/* Same reasoning as the research blocks: no divider immediately under the
+   heading, since the heading itself already reads as the break. */
+.pub-list .pub-row:first-child {
+  border-top: none;
+  padding-top: 0.5rem;
+}
+.pub-list .pub-row:last-child {
+  border-bottom: 1px solid var(--brand-line);
+}
+.pub-year {
+  font-family: var(--brand-font-display);
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: var(--brand-terracotta-deep);
+}
+.pub-title {
+  display: block;
+  font-family: var(--brand-font-body);
+  font-weight: 700;
+  font-size: 0.98rem;
+  color: var(--brand-navy) !important;
+  text-decoration: none !important;
+  margin: 0 0 0.35rem;
+  line-height: 1.4;
+  border-bottom: 1px solid transparent;
+}
+a.pub-title:hover,
+a.pub-title:focus-visible {
+  border-bottom-color: var(--brand-terracotta-deep);
+}
+.pub-meta {
+  font-size: 0.85rem;
+  color: var(--brand-ink-soft);
+  margin: 0;
+}
+.pub-meta em {
+  font-style: italic;
+}
+
+@media (max-width: 860px) {
+  .profile-grid {
+    grid-template-columns: 1fr;
+  }
+  .frame-block {
+    margin: 0 auto;
+  }
+  .research-block {
+    grid-template-columns: 4px 1fr;
+    column-gap: 1.1rem;
+  }
+  .pub-row {
+    grid-template-columns: 48px 1fr;
+  }
+}
+
+/* ===== Site footer ===== */
+.footer {
+  background: var(--brand-paper) !important;
+}
+.navbar {
+  background-color: var(--brand-paper) !important;
+  border-bottom: 1px solid var(--brand-line) !important;
+}
+
+/* ===== Site navbar ===== */
+.navbar .navbar-brand,
+.navbar .navbar-title,
+.navbar .nav-link {
+  color: var(--brand-navy) !important;
+}
+.navbar .nav-link:hover,
+.navbar .nav-link:focus,
+.navbar .navbar-brand:hover {
+  color: var(--brand-terracotta-deep) !important;
+}

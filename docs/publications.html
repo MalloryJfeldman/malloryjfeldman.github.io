@@ -64,9 +64,9 @@ div.csl-indent {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-b4a4a022b9423bdc9d5a55a1cd4b30eb.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-b4a4a022b9423bdc9d5a55a1cd4b30eb.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-b4a4a022b9423bdc9d5a55a1cd4b30eb.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-114642e529661cd1b39813d574512493.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-114642e529661cd1b39813d574512493.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-114642e529661cd1b39813d574512493.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -96,6 +96,7 @@ div.csl-indent {
 }</script>
 
 
+<link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="nav-fixed fullcontent quarto-light">
@@ -105,10 +106,6 @@ div.csl-indent {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./images/heart copy.png" alt="" class="navbar-logo light-content">
-    <img src="./images/heart copy.png" alt="" class="navbar-logo dark-content">
-    </a>
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">MALLORY J FELDMAN</span>
     </a>
@@ -124,24 +121,12 @@ div.csl-indent {
 <span class="menu-text">HOME</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./research.html"> 
-<span class="menu-text">RESEARCH</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./curriculum vitae.html"> 
-<span class="menu-text">CV</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link active" href="./publications.html" aria-current="page"> 
 <span class="menu-text">PUBLICATIONS</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./partnerships.html"> 
 <span class="menu-text">PARTNERSHIPS</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./contact.html"> 
-<span class="menu-text">CONTACT</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -156,27 +141,26 @@ div.csl-indent {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><h1 class="title display-7">Publications</h1></header>
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Publications</h1>
-</div>
-
-
-
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
+<header id="title-block-header">
 
 
 </header>
 
 
+<style>
+/* This page shows its own title overlaid on the banner below, so hide
+   Quarto's auto-generated title block instead of showing it twice. */
+#title-block-header { display: none !important; }
+main#quarto-document-content { padding-top: 0 !important; margin-top: 0 !important; }
+</style>
+<div class="pub-banner column-screen">
+<img src="images/banner.png" alt="Flat geometric illustration in navy, olive, gold and terracotta of an eye, a brain, a heart, lungs and an open book, above a line of diverse profile silhouettes.">
+<div class="pub-banner-title">
+Publications
+</div>
+</div>
 <p>This page lists all my published works, organized by year. Click a paper’s title to visit the publisher page. Use <code>Abstract</code> to reveal the summary, and <code>Citation</code> for the APA 7th-edition reference.<span style="font-size:0.9rem; opacity:0.8;">* = co-first authorship</span></p>
 <p>Code adapted from <a href="https://affcom.ku.edu/research.html">Jeffrey Girard</a>.</p>
 <!-- KEYWORD FILTER SCRIPT -->
@@ -280,26 +264,179 @@ document.addEventListener("DOMContentLoaded", function() {
 <div class="cell">
 <style type="text/css">
 /* =========================================
-   PUBLICATION CARDS AND MOBILE FIXES
+   PUBLICATION LIST -- matches the "Most recent
+   publications" row style on the homepage:
+   no card boxes, thin dividers between entries,
+   bold navy titles, burnt-orange year headers.
 ========================================= */
-.year-group{margin:28px 0 8px;}
-.year-title{margin:0;font-size:1.35rem;border-bottom:1px solid #e5e7eb;padding-bottom:2px;}
-.pub-card{border:1px solid #e5e7eb;border-radius:14px;padding:16px;margin:14px 0;background:#fff;}
-.pub-title{font-weight:600;font-size:1.05rem;margin-bottom:4px;}
-.pub-title a{text-decoration:none;}
-.pub-meta{color:#555;font-size:0.95rem;margin-bottom:8px;}
-.pub-actions{display:flex;flex-wrap:wrap;gap:8px 14px;margin-top:8px;margin-bottom:8px;}
-.pub-actions a{text-decoration:none;font-size:0.92rem;border-bottom:1px dotted #999;color:black;cursor:pointer;}
-.pub-actions a.external{border-bottom-style:solid;}
-.toggle-area{display:none;position:relative;border:1px solid #000;border-radius:10px;padding:12px 44px 12px 12px;background:#fafafa;margin-top:10px;overflow:auto;}
-.toggle-area .panel-label{font-size:0.82rem;color:#333;font-weight:600;text-transform:uppercase;letter-spacing:0.03em;opacity:0.85;margin-bottom:6px;}
-.copy-btn{position:absolute;top:6px;right:6px;border:1px solid #ddd;background:#fff;font-size:0.85rem;padding:4px 8px;border-radius:6px;cursor:pointer;}
-.copy-toast{position:absolute;top:6px;right:70px;font-size:0.8rem;background:#333;color:#fff;padding:3px 7px;border-radius:6px;display:none;}
-div#refs,div#refs + h1,div#refs + h2{display:none !important;}
+body { background: var(--brand-paper); }
 
-/* Mobile-specific adjustments for cards */
+.pub-banner {
+  position: relative;
+  overflow: hidden;
+  margin: 0 0 2.5rem;
+}
+.pub-banner img {
+  width: 100% !important;
+  height: auto !important;
+  max-width: none !important;
+  display: block;
+}
+.pub-banner-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(90%, 640px);
+  text-align: center;
+  background: rgba(45, 60, 89, 0.6);
+  color: #fff;
+  font-family: var(--brand-font-body);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: clamp(1.1rem, 3vw, 1.8rem);
+  padding: 0.75rem 1.5rem;
+}
+
+#keyword-filter-bar { margin-bottom: 1.5rem; }
+#keyword-filter-bar label {
+  font-family: var(--brand-font-body);
+  font-weight: 600;
+  color: var(--brand-ink);
+}
+#keyword-filter-bar select {
+  font-family: var(--brand-font-body);
+  border: 1px solid var(--brand-line);
+  border-radius: 4px;
+  background: var(--brand-paper);
+  color: var(--brand-ink);
+}
+#kw-count { color: var(--brand-ink-soft); }
+
+.year-group { margin: 2.5rem 0 0.5rem; }
+.year-group:first-child { margin-top: 1rem; }
+.year-title {
+  font-family: var(--brand-font-display);
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: var(--brand-terracotta-deep);
+  margin: 0 0 0.25rem;
+  border-bottom: none !important;
+  padding-bottom: 0 !important;
+}
+
+.pub-card {
+  border: none;
+  border-radius: 0;
+  border-top: 1px solid var(--brand-line);
+  padding: 1.35rem 0;
+  margin: 0;
+  background: transparent;
+}
+.year-group .pub-card:first-of-type { border-top: none; padding-top: 0.5rem; }
+
+.pub-card-title {
+  display: block;
+  font-family: var(--brand-font-body);
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--brand-navy);
+  margin: 0 0 6px;
+  line-height: 1.4;
+}
+.pub-card-title a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+.pub-card-title a:hover,
+.pub-card-title a:focus-visible {
+  border-bottom-color: var(--brand-terracotta-deep);
+}
+.pub-card-meta {
+  font-family: var(--brand-font-body);
+  color: var(--brand-ink-soft);
+  font-size: 0.9rem;
+  margin: 0 0 10px;
+  line-height: 1.6;
+}
+.pub-card-meta em { font-style: italic; }
+.pub-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+.pub-card-actions a {
+  font-family: var(--brand-font-body);
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.8rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  border-bottom: 1px dotted var(--brand-terracotta-deep);
+  color: var(--brand-navy);
+  cursor: pointer;
+}
+.pub-card-actions a.external { border-bottom-style: solid; }
+.pub-card-actions a:hover,
+.pub-card-actions a:focus-visible { color: var(--brand-terracotta-deep); }
+
+.toggle-area {
+  display: none;
+  position: relative;
+  border: 1px solid var(--brand-line);
+  border-radius: 6px;
+  padding: 14px 48px 14px 16px;
+  background: var(--brand-paper);
+  margin-top: 10px;
+  margin-bottom: 6px;
+  overflow: auto;
+  font-family: var(--brand-font-body);
+  color: var(--brand-ink-soft);
+  font-size: 0.92rem;
+  line-height: 1.65;
+}
+.toggle-area .panel-label {
+  font-size: 0.75rem;
+  color: var(--brand-terracotta-deep);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 8px;
+}
+.copy-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: 1px solid var(--brand-line);
+  background: var(--brand-paper);
+  font-family: var(--brand-font-body);
+  font-size: 0.8rem;
+  padding: 4px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  color: var(--brand-navy);
+}
+.copy-btn:hover { border-color: var(--brand-terracotta-deep); }
+.copy-toast {
+  position: absolute;
+  top: 12px;
+  right: 90px;
+  font-family: var(--brand-font-body);
+  font-size: 0.78rem;
+  background: var(--brand-navy);
+  color: #fff;
+  padding: 3px 8px;
+  border-radius: 4px;
+  display: none;
+}
+#quarto-appendix{display:none !important;}
+
 @media(max-width:768px){
-  .pub-card{flex-direction:column;width:100%;box-sizing:border-box;margin:12px 0;}
+  .pub-card{padding:1.1rem 0;}
 }
 </style>
 </div>
@@ -327,15 +464,15 @@ div#refs,div#refs + h1,div#refs + h2{display:none !important;}
 <h2 class="year-title anchored" id="y-2026">2026</h2>
 <div>
 <div class="pub-card" data-key="frye_emotional_2026" data-keywords="Emotional Experience||Adolescent Development||Neuroimaging">
-<div class="pub-title">
+<div class="pub-card-title">
 <a href="https://doi.org/10.1007/s42761-025-00347-4" target="_blank" rel="noopener">Emotional Attention Moderates the Link between Allostatic-interoceptive System Organization and Depression in Adolescents</a>
 </div>
-<div class="pub-meta">
+<div class="pub-card-meta">
 Frye, Lin, Feldman, Prinstein, Cohen, Telzer &amp; Lindquist
 <br>
 <em>Affective Science</em>
 </div>
-<div class="pub-actions">
+<div class="pub-card-actions">
 <a href="#" data-action="abstract" role="button">Abstract</a>
 <a href="#" data-action="citation" role="button">Citation</a>
 </div>
@@ -350,15 +487,15 @@ Frye, Lin, Feldman, Prinstein, Cohen, Telzer &amp; Lindquist
 </div>
 </div>
 <div class="pub-card" data-key="Shipkova2026" data-keywords="Emotional Experience||Social Processes||Adolescent Development||Neuroimaging">
-<div class="pub-title">
+<div class="pub-card-title">
 <a href="https://doi.org/10.1111/jora.70154" target="_blank" rel="noopener">The roles of emotional responding and regulation in adolescent friendship stability: A multimethod functional magnetic resonance imaging study</a>
 </div>
-<div class="pub-meta">
+<div class="pub-card-meta">
 Shipkova, Bonar, Capella, Feldman, Field, Prinstein, Telzer &amp; Lindquist
 <br>
 <em>Journal of Research on Adolescence</em>
 </div>
-<div class="pub-actions">
+<div class="pub-card-actions">
 <a href="#" data-action="abstract" role="button">Abstract</a>
 <a href="#" data-action="citation" role="button">Citation</a>
 </div>
@@ -378,15 +515,15 @@ Shipkova, Bonar, Capella, Feldman, Field, Prinstein, Telzer &amp; Lindquist
 <h2 class="year-title anchored" id="y-2025">2025</h2>
 <div>
 <div class="pub-card" data-key="Jolink_Feldman_al_2025" data-keywords="Social Processes||Inflammation">
-<div class="pub-title">
+<div class="pub-card-title">
 <a href="https://doi.org/10.1016/j.bbi.2025.04.018" target="_blank" rel="noopener">Effects of a mild inflammatory challenge on cytokines and sickness behavior: A randomized controlled trial using the influenza vaccine</a>
 </div>
-<div class="pub-meta">
+<div class="pub-card-meta">
 Jolink*, Feldman*, Antenucci, Cardenas, West, Nakamura &amp; Muscatell
 <br>
 <em>Brain, Behavior, and Immunity</em>
 </div>
-<div class="pub-actions">
+<div class="pub-card-actions">
 <a href="#" data-action="abstract" role="button">Abstract</a>
 <a href="#" data-action="citation" role="button">Citation</a>
 </div>
@@ -401,15 +538,15 @@ Jolink*, Feldman*, Antenucci, Cardenas, West, Nakamura &amp; Muscatell
 </div>
 </div>
 <div class="pub-card" data-key="Antenucci_al_2025" data-keywords="Social Processes||Inflammation">
-<div class="pub-title">
+<div class="pub-card-title">
 <a href="https://doi.org/10.1016/j.bbi.2025.106242" target="_blank" rel="noopener">Increases in inflammation are associated with decreased trust of racial out-group members</a>
 </div>
-<div class="pub-meta">
+<div class="pub-card-meta">
 Antenucci, Feldman, Jolink, West, Cardenas, Alvarez &amp; Muscatell
 <br>
 <em>Brain, Behavior, and Immunity</em>
 </div>
-<div class="pub-actions">
+<div class="pub-card-actions">
 <a href="#" data-action="abstract" role="button">Abstract</a>
 <a href="#" data-action="citation" role="button">Citation</a>
 </div>
@@ -424,15 +561,15 @@ Antenucci, Feldman, Jolink, West, Cardenas, Alvarez &amp; Muscatell
 </div>
 </div>
 <div class="pub-card" data-key="Field2025_popularity" data-keywords="Social Processes||Adolescent Development">
-<div class="pub-title">
+<div class="pub-card-title">
 <a href="https://doi.org/10.1037/dev0001914" target="_blank" rel="noopener">Popularity, but not likability, as a risk factor for low empathy: A longitudinal examination of within- and between-person effects of peer status and empathy in adolescence</a>
 </div>
-<div class="pub-meta">
+<div class="pub-card-meta">
 Field, Balkind, Burnell, Fox, Feldman, Nick, Telzer, Lindquist &amp; Prinstein
 <br>
 <em>Developmental Psychology</em>
 </div>
-<div class="pub-actions">
+<div class="pub-card-actions">
 <a href="#" data-action="abstract" role="button">Abstract</a>
 <a href="#" data-action="citation" role="button">Citation</a>
 </div>
@@ -447,15 +584,15 @@ Field, Balkind, Burnell, Fox, Feldman, Nick, Telzer, Lindquist &amp; Prinstein
 </div>
 </div>
 <div class="pub-card" data-key="West_al_2025" data-keywords="Emotional Experience||Social Processes||Inflammation">
-<div class="pub-title">
+<div class="pub-card-title">
 <a href="https://doi.org/10.1037/emo0001594" target="_blank" rel="noopener">Seeking positive connection: Is inflammation associated with anticipated and experienced shared positive affect with close versus non-close others?</a>
 </div>
-<div class="pub-meta">
+<div class="pub-card-meta">
 West, Jolink, Feldman, Alvarez, Cardenas, Fredrickson &amp; Muscatell
 <br>
 <em>Emotion</em>
 </div>
-<div class="pub-actions">
+<div class="pub-card-actions">
 <a href="#" data-action="abstract" role="button">Abstract</a>
 <a href="#" data-action="citation" role="button">Citation</a>
 </div>
@@ -470,15 +607,15 @@ West, Jolink, Feldman, Alvarez, Cardenas, Fredrickson &amp; Muscatell
 </div>
 </div>
 <div class="pub-card" data-key="Tuck_al_2025" data-keywords="Emotional Experience||Social Processes">
-<div class="pub-title">
+<div class="pub-card-title">
 <a href="https://doi.org/10.1037/emo0001436" target="_blank" rel="noopener">Social contexts are associated with higher emotional awareness than non-social contexts: Evidence in a sample of people with and without major depressive disorder</a>
 </div>
-<div class="pub-meta">
+<div class="pub-card-meta">
 Tuck, Feldman, Lindquist &amp; Thompson
 <br>
 <em>Emotion</em>
 </div>
-<div class="pub-actions">
+<div class="pub-card-actions">
 <a href="#" data-action="abstract" role="button">Abstract</a>
 <a href="#" data-action="citation" role="button">Citation</a>
 <a href="https://sites.wustl.edu/emotionlab/files/2025/03/tuck-et-al.pdf" target="_blank" rel="noopener" class="external">[PDF]</a>
@@ -499,15 +636,15 @@ Tuck, Feldman, Lindquist &amp; Thompson
 <h2 class="year-title anchored" id="y-2024">2024</h2>
 <div>
 <div class="pub-card" data-key="Alvarez_al_2024" data-keywords="Social Processes||Inflammation">
-<div class="pub-title">
+<div class="pub-card-title">
 <a href="https://doi.org/10.1016/j.bbi.2024.09.010" target="_blank" rel="noopener">Differential effects of social versus monetary incentives on inhibitory control under acute inflammation</a>
 </div>
-<div class="pub-meta">
+<div class="pub-card-meta">
 Alvarez, Jolink, West, Cardenas, Feldman, Cohen &amp; Muscatell
 <br>
 <em>Brain, Behavior, and Immunity</em>
 </div>
-<div class="pub-actions">
+<div class="pub-card-actions">
 <a href="#" data-action="abstract" role="button">Abstract</a>
 <a href="#" data-action="citation" role="button">Citation</a>
 <a href="https://www.sciencedirect.com/science/article/am/pii/S0889159124006019" target="_blank" rel="noopener" class="external">[PDF]</a>
@@ -523,15 +660,15 @@ Alvarez, Jolink, West, Cardenas, Feldman, Cohen &amp; Muscatell
 </div>
 </div>
 <div class="pub-card" data-key="Vishnubhotla_al_2024" data-keywords="Emotional Experience">
-<div class="pub-title">
+<div class="pub-card-title">
 <a href="https://doi.org/10.48550/arXiv.2403.02281" target="_blank" rel="noopener">Emotion Granularity from Text: An Aggregate-Level Indicator of Mental Health</a>
 </div>
-<div class="pub-meta">
+<div class="pub-card-meta">
 Vishnubhotla, Teodorescu, Feldman, Lindquist &amp; Mohammad
 <br>
 <em>Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing</em>
 </div>
-<div class="pub-actions">
+<div class="pub-card-actions">
 <a href="#" data-action="abstract" role="button">Abstract</a>
 <a href="#" data-action="citation" role="button">Citation</a>
 <a href="https://arxiv.org/abs/2403.02281" target="_blank" rel="noopener" class="external">[PDF]</a>
@@ -547,15 +684,15 @@ Vishnubhotla, Teodorescu, Feldman, Lindquist &amp; Mohammad
 </div>
 </div>
 <div class="pub-card" data-key="Jolink_al_2024" data-keywords="Social Processes||Inflammation">
-<div class="pub-title">
+<div class="pub-card-title">
 <a href="https://doi.org/10.1016/j.psyneuen.2024.107020" target="_blank" rel="noopener">Higher interleukin-6 is associated with greater momentary social connection in close relationships in daily life</a>
 </div>
-<div class="pub-meta">
+<div class="pub-card-meta">
 Jolink, West, Alvarez, Cardenas, Feldman, Algoe &amp; Muscatell
 <br>
 <em>Psychoneuroendocrinology</em>
 </div>
-<div class="pub-actions">
+<div class="pub-card-actions">
 <a href="#" data-action="abstract" role="button">Abstract</a>
 <a href="#" data-action="citation" role="button">Citation</a>
 <a href="https://www.sciencedirect.com/science/article/am/pii/S030645302400064" target="_blank" rel="noopener" class="external">[PDF]</a>
@@ -571,15 +708,15 @@ Jolink, West, Alvarez, Cardenas, Feldman, Algoe &amp; Muscatell
 </div>
 </div>
 <div class="pub-card" data-key="Feldman_Capella_al_2024" data-keywords="Emotional Experience||Social Processes||Adolescent Development||Neuroimaging">
-<div class="pub-title">
+<div class="pub-card-title">
 <a href="https://doi.org/10.1093/scan/nsae072" target="_blank" rel="noopener">Proximity within real world adolescent peer networks predicts neural similarity during affective experience</a>
 </div>
-<div class="pub-meta">
+<div class="pub-card-meta">
 Feldman*, Capella*, Dai, Bonar, Field, Lewis, Prinstein, Telzer &amp; Lindquist
 <br>
 <em>Social Cognitive and Affective Neuroscience</em>
 </div>
-<div class="pub-actions">
+<div class="pub-card-actions">
 <a href="#" data-action="abstract" role="button">Abstract</a>
 <a href="#" data-action="citation" role="button">Citation</a>
 <a href="https://academic.oup.com/scan/article-pdf/19/1/nsae072/60455788/nsae072.pdf" target="_blank" rel="noopener" class="external">[PDF]</a>
@@ -595,15 +732,15 @@ Feldman*, Capella*, Dai, Bonar, Field, Lewis, Prinstein, Telzer &amp; Lindquist
 </div>
 </div>
 <div class="pub-card" data-key="Feldman2024" data-keywords="Interoception||Emotional Experience||Social Processes||Lifespan Development">
-<div class="pub-title">
+<div class="pub-card-title">
 <a href="https://doi.org/10.1007/978-3-031-68521-7_5" target="_blank" rel="noopener">The Role of Interoception in Emotion and Social Cognition</a>
 </div>
-<div class="pub-meta">
+<div class="pub-card-meta">
 Feldman, Ma &amp; Lindquist
 <br>
 <em>Interoception: A Comprehensive Guide</em>
 </div>
-<div class="pub-actions">
+<div class="pub-card-actions">
 <a href="#" data-action="abstract" role="button">Abstract</a>
 <a href="#" data-action="citation" role="button">Citation</a>
 <a href="https://link.springer.com/content/pdf/10.1007/978-3-031-68521-7.pdf" target="_blank" rel="noopener" class="external">[PDF]</a>
@@ -619,15 +756,15 @@ Feldman, Ma &amp; Lindquist
 </div>
 </div>
 <div class="pub-card" data-key="Feldman_BlissMoreau_Lindquist_2024" data-keywords="Interoception||Emotional Experience">
-<div class="pub-title">
+<div class="pub-card-title">
 <a href="https://doi.org/10.1016/j.tics.2024.01.009" target="_blank" rel="noopener">The neurobiology of interoception and affect</a>
 </div>
-<div class="pub-meta">
+<div class="pub-card-meta">
 Feldman, Bliss-Moreau &amp; Lindquist
 <br>
 <em>Trends in Cognitive Sciences</em>
 </div>
-<div class="pub-actions">
+<div class="pub-card-actions">
 <a href="#" data-action="abstract" role="button">Abstract</a>
 <a href="#" data-action="citation" role="button">Citation</a>
 <a href="https://www.sciencedirect.com/science/article/am/pii/S1364661324000093" target="_blank" rel="noopener" class="external">[PDF]</a>
@@ -648,15 +785,15 @@ Feldman, Bliss-Moreau &amp; Lindquist
 <h2 class="year-title anchored" id="y-2023">2023</h2>
 <div>
 <div class="pub-card" data-key="MacCormack_Feldman_Bonar_Lindquist_2023" data-keywords="Interoception||Emotional Experience||Adult Aging||Lifespan Development">
-<div class="pub-title">
+<div class="pub-card-title">
 <a href="https://doi.org/10.1017/9781009209656.004" target="_blank" rel="noopener">Aging Bodies, Brains, and Emotions: The Physiological Hypothesis of Emotional Aging</a>
 </div>
-<div class="pub-meta">
+<div class="pub-card-meta">
 MacCormack, Feldman, Bonar &amp; Lindquist
 <br>
 <em>Emotion Communication by the Aging Face and Body: A Multidisciplinary View</em>
 </div>
-<div class="pub-actions">
+<div class="pub-card-actions">
 <a href="#" data-action="abstract" role="button">Abstract</a>
 <a href="#" data-action="citation" role="button">Citation</a>
 </div>
@@ -671,15 +808,15 @@ MacCormack, Feldman, Bonar &amp; Lindquist
 </div>
 </div>
 <div class="pub-card" data-key="Bonar_al_2023" data-keywords="Emotional Experience||Autonomic Physiology">
-<div class="pub-title">
+<div class="pub-card-title">
 <a href="https://doi.org/10.1007/s42761-023-00189-y" target="_blank" rel="noopener">Examining the Role of Emotion Differentiation on Emotion and Cardiovascular Physiological Activity During Acute Stress</a>
 </div>
-<div class="pub-meta">
+<div class="pub-card-meta">
 Bonar, MacCormack, Feldman &amp; Lindquist
 <br>
 <em>Affective Science</em>
 </div>
-<div class="pub-actions">
+<div class="pub-card-actions">
 <a href="#" data-action="abstract" role="button">Abstract</a>
 <a href="#" data-action="citation" role="button">Citation</a>
 <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10247597/" target="_blank" rel="noopener" class="external">[PDF]</a>
@@ -695,15 +832,15 @@ Bonar, MacCormack, Feldman &amp; Lindquist
 </div>
 </div>
 <div class="pub-card" data-key="Lin_al_2023" data-keywords="Social Processes">
-<div class="pub-title">
+<div class="pub-card-title">
 <a href="https://doi.org/10.1007/s10919-023-00431-y" target="_blank" rel="noopener">Friends in Sync? Examining the Relationship Between the Degree of Nonverbal Synchrony, Friendship Satisfaction and Support</a>
 </div>
-<div class="pub-meta">
+<div class="pub-card-meta">
 Lin, Feldman, Tudder, Gresham, Peters &amp; Dodell-Feder
 <br>
 <em>Journal of Nonverbal Behavior</em>
 </div>
-<div class="pub-actions">
+<div class="pub-card-actions">
 <a href="#" data-action="abstract" role="button">Abstract</a>
 <a href="#" data-action="citation" role="button">Citation</a>
 </div>
@@ -718,15 +855,15 @@ Lin, Feldman, Tudder, Gresham, Peters &amp; Dodell-Feder
 </div>
 </div>
 <div class="pub-card" data-key="Feldman_al_IDEC_2023" data-keywords="Interoception||Social Processes||Autonomic Physiology">
-<div class="pub-title">
+<div class="pub-card-title">
 <a href="https://doi.org/10.1037/emo0001210" target="_blank" rel="noopener">Interoceptive ability moderates the effect of physiological reactivity on social judgment</a>
 </div>
-<div class="pub-meta">
+<div class="pub-card-meta">
 Feldman, MacCormack, Bonar &amp; Lindquist
 <br>
 <em>Emotion</em>
 </div>
-<div class="pub-actions">
+<div class="pub-card-actions">
 <a href="#" data-action="abstract" role="button">Abstract</a>
 <a href="#" data-action="citation" role="button">Citation</a>
 <a href="https://psycnet.apa.org/manuscript/2023-56144-001.pdf" target="_blank" rel="noopener" class="external">[PDF]</a>
@@ -742,15 +879,15 @@ Feldman, MacCormack, Bonar &amp; Lindquist
 </div>
 </div>
 <div class="pub-card" data-key="Feldman_al_2023" data-keywords="Interoception||Emotional Experience||Social Processes||Inflammation">
-<div class="pub-title">
+<div class="pub-card-title">
 <a href="https://doi.org/10.1016/j.bbi.2023.05.011" target="_blank" rel="noopener">The roles of inflammation, affect, and interoception in predicting social perception</a>
 </div>
-<div class="pub-meta">
+<div class="pub-card-meta">
 Feldman, Jolink, Alvarez, Fendinger, Gaudier-Diaz, Lindquist &amp; Muscatell
 <br>
 <em>Brain, Behavior, and Immunity</em>
 </div>
-<div class="pub-actions">
+<div class="pub-card-actions">
 <a href="#" data-action="abstract" role="button">Abstract</a>
 <a href="#" data-action="citation" role="button">Citation</a>
 <a href="https://www.sciencedirect.com/science/article/am/pii/S0889159123001290" target="_blank" rel="noopener" class="external">[PDF]</a>
@@ -771,15 +908,15 @@ Feldman, Jolink, Alvarez, Fendinger, Gaudier-Diaz, Lindquist &amp; Muscatell
 <h2 class="year-title anchored" id="y-2022">2022</h2>
 <div>
 <div class="pub-card" data-key="Feldman_al_2022" data-keywords="Social Processes||Interoception||Autonomic Physiology">
-<div class="pub-title">
+<div class="pub-card-title">
 <a href="https://doi.org/10.1007/s42761-022-00114-9" target="_blank" rel="noopener">Affect and Social Judgment: The Roles of Physiological Reactivity and Interoceptive Sensitivity</a>
 </div>
-<div class="pub-meta">
+<div class="pub-card-meta">
 Feldman, Siegel, Barrett, Quigley &amp; Wormwood
 <br>
 <em>Affective Science</em>
 </div>
-<div class="pub-actions">
+<div class="pub-card-actions">
 <a href="#" data-action="abstract" role="button">Abstract</a>
 <a href="#" data-action="citation" role="button">Citation</a>
 <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9382998/" target="_blank" rel="noopener" class="external">[PDF]</a>
@@ -795,15 +932,15 @@ Feldman, Siegel, Barrett, Quigley &amp; Wormwood
 </div>
 </div>
 <div class="pub-card" data-key="Jolink_al_2022" data-keywords="">
-<div class="pub-title">
+<div class="pub-card-title">
 <a href="https://doi.org/10.1016/j.bbi.2021.10.019" target="_blank" rel="noopener">Inflammatory reactivity to the influenza vaccine is associated with changes in automatic social behavior</a>
 </div>
-<div class="pub-meta">
+<div class="pub-card-meta">
 Jolink, Fendinger, Alvarez, Feldman, Gaudier-Diaz &amp; Muscatell
 <br>
 <em>Brain, Behavior, and Immunity</em>
 </div>
-<div class="pub-actions">
+<div class="pub-card-actions">
 <a href="#" data-action="abstract" role="button">Abstract</a>
 <a href="#" data-action="citation" role="button">Citation</a>
 <a href="https://www.sciencedirect.com/science/article/am/pii/S088915912100595X" target="_blank" rel="noopener" class="external">[PDF]</a>
@@ -824,15 +961,15 @@ Jolink, Fendinger, Alvarez, Feldman, Gaudier-Diaz &amp; Muscatell
 <h2 class="year-title anchored" id="y-2021">2021</h2>
 <div>
 <div class="pub-card" data-key="Kleckner2021MobileDevices" data-keywords="Autonomic Physiology">
-<div class="pub-title">
+<div class="pub-card-title">
 <a href="https://doi.org/10.3758/s13428-020-01438-9" target="_blank" rel="noopener">Framework for selecting and benchmarking mobile devices in psychophysiological research</a>
 </div>
-<div class="pub-meta">
+<div class="pub-card-meta">
 Kleckner*, Feldman*, Goodwin &amp; Quigley
 <br>
 <em>Behavior Research Methods</em>
 </div>
-<div class="pub-actions">
+<div class="pub-card-actions">
 <a href="#" data-action="abstract" role="button">Abstract</a>
 <a href="#" data-action="citation" role="button">Citation</a>
 <a href="https://link.springer.com/content/pdf/10.3758/s13428-020-01438-9.pdf" target="_blank" rel="noopener" class="external">[PDF]</a>
@@ -848,15 +985,15 @@ Kleckner*, Feldman*, Goodwin &amp; Quigley
 </div>
 </div>
 <div class="pub-card" data-key="Martinez2021NarrativesImmigrants" data-keywords="">
-<div class="pub-title">
+<div class="pub-card-title">
 <a href="https://doi.org/10.1177/0956797620963610" target="_blank" rel="noopener">Narratives Shape Cognitive Representations of Immigrants and Immigration-Policy Preferences</a>
 </div>
-<div class="pub-meta">
+<div class="pub-card-meta">
 Martinez, Feldman, Feldman &amp; Cikara
 <br>
 <em>Psychological Science</em>
 </div>
-<div class="pub-actions">
+<div class="pub-card-actions">
 <a href="#" data-action="abstract" role="button">Abstract</a>
 <a href="#" data-action="citation" role="button">Citation</a>
 <a href="https://par.nsf.gov/servlets/purl/10215751" target="_blank" rel="noopener" class="external">[PDF]</a>
@@ -877,15 +1014,15 @@ Martinez, Feldman, Feldman &amp; Cikara
 <h2 class="year-title anchored" id="y-2020">2020</h2>
 <div>
 <div class="pub-card" data-key="Theriault2020BeginningBiology" data-keywords="">
-<div class="pub-title">
+<div class="pub-card-title">
 <a href="https://doi.org/10.1017/s0140525x19001705" target="_blank" rel="noopener">Beginning with biology: "Aspects of cognition" exist in the service of the brain's overall function as a resource-regulator</a>
 </div>
-<div class="pub-meta">
+<div class="pub-card-meta">
 Theriault, Coleman, Feldman, Fridman, Sennesh, Barrett &amp; Quigley
 <br>
 <em>Behavioral and Brain Sciences</em>
 </div>
-<div class="pub-actions">
+<div class="pub-card-actions">
 <a href="#" data-action="abstract" role="button">Abstract</a>
 <a href="#" data-action="citation" role="button">Citation</a>
 </div>
@@ -900,15 +1037,15 @@ Theriault, Coleman, Feldman, Fridman, Sennesh, Barrett &amp; Quigley
 </div>
 </div>
 <div class="pub-card" data-key="Hoemann2020ExperienceSampling" data-keywords="Autonomic Physiology||Emotional Experience">
-<div class="pub-title">
+<div class="pub-card-title">
 <a href="https://doi.org/10.1038/s41598-020-69180-y" target="_blank" rel="noopener">Context-aware experience sampling reveals the scale of variation in affective experience</a>
 </div>
-<div class="pub-meta">
+<div class="pub-card-meta">
 Hoemann*, Khan*, Feldman, Nielson, Devlin, Dy, Barrett, Wormwood &amp; Quigley
 <br>
 <em>Scientific Reports</em>
 </div>
-<div class="pub-actions">
+<div class="pub-card-actions">
 <a href="#" data-action="abstract" role="button">Abstract</a>
 <a href="#" data-action="citation" role="button">Citation</a>
 <a href="https://www.nature.com/articles/s41598-020-69180-y.pdf" target="_blank" rel="noopener" class="external">[PDF]</a>

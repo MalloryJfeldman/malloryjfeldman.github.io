@@ -3,6 +3,21 @@ title: "Curriculum Vitae"
 format: html
 ---
 
+```{=html}
+<style>
+/* Keep the site footer, navbar, and nav text on-brand on this page too,
+   even though it doesn't load the full v4 stylesheet yet. */
+.footer { background: #FFFDF6 !important; }
+.navbar { background-color: #FFFDF6 !important; border-bottom: 1px solid #E6DCC2 !important; }
+.navbar .navbar-brand,
+.navbar .navbar-title,
+.navbar .nav-link { color: #2D3C59 !important; }
+.navbar .nav-link:hover,
+.navbar .nav-link:focus,
+.navbar .navbar-brand:hover { color: #8C4A2E !important; }
+</style>
+```
+
 [Click here to download](https://docs.google.com/document/d/1MTehANlERjCk7fYqt_nXaR1tqve-KHZMiuJreNzapuI/edit?usp=sharing)
 
 <iframe 

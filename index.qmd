@@ -1,42 +1,216 @@
 ---
 title: "Mallory J. Feldman, PhD"
-image: images/profile.jpg
-about:
-  image-width: 18em
-  template: jolla
-  links:
-    - href: https://scholar.google.com/scholar?as_sdt=0%2C14&btnG=&hl=en&q=Mallory%20Feldman 
-      icon: "google"       # Google Scholar
-      text: "Google Scholar"
-    - href: https://orcid.org/0000-0003-1051-2088
-      icon: "info-circle-fill" # ORCID
-      text: "ORCID"
-    - href: https://www.researchgate.net/profile/Mallory-Feldman/publications
-      icon: "r-square-fill" # ORCID
-      text: "ResearchGate"
-    - href: https://github.com/MalloryJfeldman
-      icon: "github" # ORCID
-      text: "GitHub"
-    - href: https://osf.io/m324r/
-      icon: "openai"
-      text: OSF
-    - href: https://bsky.app/profile/malloryjfeldman.bsky.social 
-      icon: "bluesky"         # Bluesky (use a bird icon)
-      text: BlueSky
-    - href: https://www.linkedin.com/in/malloryjfeldman/
-      icon: "linkedin"     # LinkedIn
-      text: LinkedIn
-    # (additional links excluded for brevity)
+title-block-style: none
+format:
+  html:
+    css: styles.css
+execute:
+  echo: false
+  warning: false
+  message: false
 ---
 
-:::: spotlight-container
-::: spotlight-image
-**I am a postdoctoral scholar in Psychology and Neuroscience at The Ohio State University** and a member of both the [Affective Science Lab](https://affectivesciencelab.com/) and the [Social Neuroscience and Health Lab](https://carolinasnhlab.com/). I study how people sense and make sense of their bodies with implications for human health and social functioning across the lifespan.
+```{=html}
+<style>
+/* Belt-and-suspenders: index.qmd has its own name/heading in the profile
+   section below, so hide Quarto's auto-generated title block (in case
+   title-block-style: none isn't recognized by this Quarto version) to
+   avoid showing the name twice. Scoped to this page only. */
+#title-block-header { display: none !important; }
+/* Close the gap the (now-hidden) title block leaves above the banner. */
+main#quarto-document-content { padding-top: 0 !important; margin-top: 0 !important; }
+.banner { margin-top: 0 !important; }
+</style>
+```
 
-\
-[View my curriculum vitae →](curriculum%20vitae.qmd)
+::: {.banner .column-screen}
+<img src="images/banner.png" alt="Flat geometric illustration in navy, olive, gold and terracotta of an eye, a brain, a heart, lungs and an open book, above a line of diverse profile silhouettes."/>
+:::
+
+::::::::: profile-wrap
+:::::::: profile-grid
+::: frame-block
+<img src="images/profile-framed.jpg" alt="Portrait of Mallory J. Feldman, smiling outdoors in front of pine branches, in a decorative frame."/>
+:::
+
+:::: {}
+# Mallory J. Feldman, PhD {.profile-name}
+
+::: profile-bio
+I am a psychologist studying how people **sense and make sense** of their bodies, with implications for human health and social decision-making across the lifespan.
+:::
+
+[View my curriculum vitae →](https://docs.google.com/document/d/1MTehANlERjCk7fYqt_nXaR1tqve-KHZMiuJreNzapuI/edit?tab=t.0)
+
+[Contact me →](mailto:feldman.380@osu.edu)
+::::
+
+:::: profile-links-row
+::: profile-links
+- [Google Scholar](https://scholar.google.com/scholar?as_sdt=0%2C14&btnG=&hl=en&q=Mallory%20Feldman)
+- [ORCID](https://orcid.org/0000-0003-1051-2088)
+- [ResearchGate](https://www.researchgate.net/profile/Mallory-Feldman/publications)
+- [GitHub](https://github.com/MalloryJfeldman)
+- [OSF](https://osf.io/m324r/)
+- [BlueSky](https://bsky.app/profile/malloryjfeldman.bsky.social)
+- [LinkedIn](https://www.linkedin.com/in/malloryjfeldman/)
 :::
 ::::
+::::::::
+:::::::::
+
+:::::::::::::: section-alt
+::: {}
+## Research themes {.section-title style="margin-bottom:1.5rem;"}
+:::
+
+:::::::::::: research-list
+::::: research-block
+::: {.research-accent style="background:var(--brand-navy)"}
+:::
+
+::: {}
+### A mechanistic account linking body and mind
+
+All day, every day, our brains are awash in sensations. These sensations come from familiar sources like our eyes and ears — but also from the tissues and systems within our bodies. The brain integrates information from these sources into ongoing experience, fundamentally shaping our perceptions of self and world.
+
+Increasingly, neuroscience shows that the brain does not passively read out sensory signals. Instead, it anticipates sensory events and compares predictions against incoming information. My work contributes to mounting evidence that the brain's predictions about the state of the body are not one input among many, but foundational to mental life, decision-making, and behavior.
+
+<cite><a href="https://doi.org/10.1016/j.tics.2024.01.009">[Read more:]{.cite-label}Feldman, Bliss-Moreau & Lindquist · Trends in Cognitive Sciences · 2024</a></cite>
+:::
+:::::
+
+::::: research-block
+::: {.research-accent style="background:var(--brand-terracotta)"}
+:::
+
+::: {}
+### Individual differences in body perception
+
+Just as "vision" refers to the perception of light from outside the body, "interoception" refers to the perception of sensations from within the body. Just like people differ in their visual acuity and other visual traits, they also differ in their access and relationship to their bodily states. Because signals from the body do not have fixed meanings, I am interested in what explains how, when, and for whom bodily states contribute to our perceptions of self and world.
+
+<cite><a href="https://doi.org/10.1007/978-3-031-68521-7_5">[Read more:]{.cite-label}Feldman, Ma & Lindquist · in Interoception: A Comprehensive Guide, Springer · 2024</a></cite>
+:::
+:::::
+
+::::: research-block
+::: {.research-accent style="background:var(--brand-olive)"}
+:::
+
+::: {}
+### Changing bodies, changing world
+
+The world is always changing around us: fueled by technological disruption, geopolitical turbulence, climate instability, and changing social norms. Our bodies also change. This unfolds slowly over time and can be described as "biological aging," but also in spurts and starts — as in puberty, pregnancy, or following acute illness or stress. I am interested in how our changing bodies contribute to human mental life, particularly given that times of major physiological change typically coincide with other kinds of psychological and social restructuring.
+
+<cite><a href="https://doi.org/10.1017/9781009209656.004">[Read more:]{.cite-label}MacCormack, Feldman, Bonar & Lindquist · Cambridge University Press · 2023</a></cite>
+:::
+:::::
+::::::::::::
+::::::::::::::
+
+::::: page-section
+:::: section-head
+::: {}
+## Most recent publications {.section-title}
+:::
+
+<a class="section-link" href="publications.qmd">Full publication list →</a>
+::::
+
+```{r}
+# =========================================
+# MOST RECENT PUBLICATIONS
+# Auto-generated from publications/papers.bib, sorted by year
+# (and, when recorded, month) so this list never needs manual updates.
+# =========================================
+library(tidyverse)
+library(RefManageR)
+library(htmltools)
+
+`%||%` <- function(a, b) if (is.null(a) || length(a) == 0 || (length(a) == 1 && is.na(a)) || (length(a) == 1 && !nzchar(as.character(a)))) b else a
+strip_braces <- function(x) { if (is.null(x) || length(x) == 0) return(NA_character_); gsub("[{}]", "", as.character(x), perl = TRUE) }
+
+month_num <- function(m) {
+  m <- tryCatch(as.character(m), error = function(e) character(0))
+  m <- m[!is.na(m) & nzchar(trimws(m))]
+  if (!length(m)) return(0)
+  m <- tolower(trimws(m[1]))
+  m <- sub("^([a-z]+).*", "\\1", m)
+  idx <- match(substr(m, 1, 3), tolower(month.abb))
+  if (is.na(idx)) 0 else idx
+}
+
+fmt_authors <- function(entry) {
+  au <- entry$author
+  if (is.null(au) || length(au) == 0) return("")
+  one <- function(a) {
+    fam <- tryCatch(paste(as.character(a$family), collapse = " "), error = function(e) "")
+    # a$given can come back as MULTIPLE tokens (e.g. c("Natalie","G.") for
+    # "Natalie G. Frye") rather than one string. Any is.na()/if() check on
+    # that raw vector silently errors on every multi-token name and drops
+    # the author -- so filter with vectorized logic, never a bare if().
+    given_raw <- tryCatch(as.character(a$given), error = function(e) character(0))
+    given_raw <- given_raw[!is.na(given_raw) & nzchar(given_raw)]
+    if (!length(given_raw)) return(fam)
+    bits <- unlist(strsplit(given_raw, "[ .]+"))
+    bits <- bits[nzchar(bits)]
+    if (!length(bits)) return(fam)
+    initials <- paste0(toupper(substring(bits, 1, 1)), ".", collapse = " ")
+    if (!nzchar(fam)) return(initials)
+    paste0(fam, ", ", initials)
+  }
+  n <- length(au)
+  parts <- vapply(seq_len(n), function(i) tryCatch(one(au[i]), error = function(e) ""), character(1))
+  parts <- parts[nzchar(parts)]
+  if (!length(parts)) return("")
+  if (length(parts) == 1) return(parts)
+  paste(paste(parts[-length(parts)], collapse = ", "), "&", parts[length(parts)])
+}
+
+bib <- ReadBib("publications/papers.bib", check = FALSE)
+keys <- names(bib)
+
+recent <- tibble(key = keys, entry = lapply(keys, function(k) bib[k])) |>
+  mutate(
+    title    = map_chr(entry, ~ strip_braces(.x$title %||% "")),
+    authors  = map_chr(entry, ~ tryCatch(fmt_authors(.x), error = function(e) "")),
+    year_raw = map(entry, ~ .x$year %||% .x$date %||% NA),
+    year     = map_dbl(year_raw, ~ { y <- .x; if (is.list(y)) y <- y$year %||% NA; suppressWarnings(as.numeric(as.character(y))) }),
+    month    = map_dbl(entry, ~ month_num(.x$month)),
+    venue    = map_chr(entry, ~ strip_braces(.x$journal %||% .x$booktitle %||% .x$publisher %||% "")),
+    doi      = map_chr(entry, ~ strip_braces(.x$doi %||% ""))
+  ) |>
+  filter(!is.na(year)) |>
+  arrange(desc(year), desc(month), title) |>
+  slice_head(n = 5)
+
+pub_row <- function(year, title, authors, venue, doi) {
+  meta <- if (nzchar(venue)) tagList(authors, HTML(" &middot; "), tags$em(venue)) else tagList(authors)
+  # Link the title straight to the DOI when one is on record; fall back to
+  # plain text (no dead link) for any future entry that lacks one.
+  title_tag <- if (nzchar(doi)) {
+    tags$a(class = "pub-title", href = paste0("https://doi.org/", doi), title)
+  } else {
+    tags$p(class = "pub-title", title)
+  }
+  tags$div(
+    class = "pub-row",
+    tags$span(class = "pub-year", as.character(year)),
+    tags$div(
+      title_tag,
+      tags$p(class = "pub-meta", meta)
+    )
+  )
+}
+
+browsable(
+  tags$div(
+    class = "pub-list",
+    pmap(list(recent$year, recent$title, recent$authors, recent$venue, recent$doi), pub_row)
+  )
+)
+```
+:::::
 
 ```{=html}
 <script>

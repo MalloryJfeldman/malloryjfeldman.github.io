@@ -1,13 +1,71 @@
 ---
 title: "Partnerships"
+title-block-style: none
+nocite: |
+  @*
+format:
+  html:
+    css: styles.css
+execute:
+  echo: false
+  warning: false
+  message: false
 ---
+
+```{=html}
+<style>
+/* This page shows its own title overlaid on the banner below, so hide
+   Quarto's auto-generated title block instead of showing it twice. */
+#title-block-header { display: none !important; }
+main#quarto-document-content { padding-top: 0 !important; margin-top: 0 !important; }
+</style>
+```
+
+<div class="partner-banner column-screen">
+<img src="images/banner.png" alt="Flat geometric illustration in navy, olive, gold and terracotta of an eye, a brain, a heart, lungs and an open book, above a line of diverse profile silhouettes." />
+<div class="partner-banner-title">Partnerships</div>
+</div>
 
 My research sits at the intersection of psychology, neuroscience, and human health — and the questions I care about don't stop at the lab door. I'm actively interested in partnerships with industry, clinical, and technology organizations whose work touches on how people sense, interpret, and respond to their bodies.
 
-Potential areas for collaboration include health technology development and evaluation, responsible AI in health and wellness contexts, translational research bringing social science and psychophysiology to applied settings, and advisory or consulting roles where cognitive, behavioral, and neuroscientific expertise adds value.
+Potential areas for collaboration include health technology development and evaluation, responsible AI in health and wellness contexts, translational research bringing social science and psychophysiology to professional and other applied settings, and advisory or consulting roles where cognitive, behavioral, and neuroscientific expertise adds value.
 
 I have a particular interest in wearable health technologies and how physiological data is collected, interpreted, and acted upon across clinical and everyday contexts — from fitness and general health tracking to reproductive health monitoring. How people understand and respond to the signals their bodies generate is central to my research, and I see meaningful opportunities to bring that science to bear on how these tools are designed and evaluated.
 
 If you're working on something at this intersection and think there might be a fit, I'd love to hear from you.
 
-[Get in touch →](contact.qmd)
+[Get in touch →](mailto:feldman.380@osu.edu)
+
+```{=html}
+<style>
+.partner-banner {
+  position: relative;
+  overflow: hidden;
+  margin: 0 0 2.5rem;
+}
+
+.partner-banner img {
+  width: 100% !important;
+  height: auto !important;
+  max-width: none !important;
+  display: block;
+}
+
+.partner-banner-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(90%, 640px);
+  text-align: center;
+  background: rgba(45, 60, 89, 0.6);
+  color: #fff;
+  font-family: var(--brand-font-body);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: clamp(1.1rem, 3vw, 1.8rem);
+  padding: 0.75rem 1.5rem;
+}
+</style>
+```

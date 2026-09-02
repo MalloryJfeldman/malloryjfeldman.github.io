@@ -10,16 +10,10 @@ website:
     left:
       - href: index.qmd
         text: HOME
-      - href: research.qmd
-        text: RESEARCH
-      - href: curriculum vitae.qmd
-        text: CV
       - href: publications.qmd
         text: PUBLICATIONS
       - href: partnerships.qmd
         text: PARTNERSHIPS
-      - href: contact.qmd
-        text: CONTACT
       
   
   page-footer:

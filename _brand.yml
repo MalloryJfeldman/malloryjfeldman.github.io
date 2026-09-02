@@ -1,16 +1,25 @@
 color:
-  background: white
-  foreground: blue
+  background: "#FBF5DD"
+  foreground: "#2D3C59"
+  primary: "#2D3C59"
+  secondary: "#94A378"
+  tertiary: "#D1855C"
+  link: "#8C4A2E"
 
 typography:
   fonts:
-    - family: Open Sans
+    - family: Fraunces
       source: google
-  base: Open Sans
-  headings: Open Sans
-
+      weight: [500, 600, 700]
+      style: [normal, italic]
+    - family: Karla
+      source: google
+      weight: [400, 500, 700]
+      style: [normal, italic]
+  base:
+    family: Karla
+  headings:
+    family: Fraunces
+    weight: 600
   link:
-    color: "#16324f"
-
-logo:
-  medium: ./images/heart copy.png
+    color: "#8C4A2E"
