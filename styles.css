@@ -276,13 +276,20 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   width: 100%;
   max-width: 340px;
-  /* Explicit aspect ratio (the composited photo is ~1000x982) instead of
-     a height:100% img that depends on the parent having a definite height
-     -- percentage heights are unreliable on a grid item and could stretch
-     to match the taller column, leaving a large gap below. */
+  /* Explicit aspect ratio instead of a height:100% img that depends on the
+     parent having a definite height -- percentage heights are unreliable
+     on a grid item and could stretch to match the taller column, leaving
+     a large gap below. */
   aspect-ratio: 1 / 1;
   overflow: hidden;
-  border-radius: 2px;
+  border-radius: 50%;
+  border: 4px solid var(--brand-paper);
+  box-shadow: 0 0 0 1px var(--brand-line), 0 10px 26px rgba(45, 60, 89, 0.16);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.frame-block:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 0 3px var(--brand-terracotta-deep), 0 14px 30px rgba(45, 60, 89, 0.22);
 }
 .frame-block img {
   width: 100% !important;
@@ -290,6 +297,7 @@ h1, h2, h3, h4, h5, h6 {
   max-width: none !important;
   display: block;
   object-fit: cover;
+  object-position: 50% 22%;
 }
 /* Quarto wraps a heading like "# ... {.profile-name}" in an auto-generated
    <section> that ALSO carries the .profile-name class, alongside the h1

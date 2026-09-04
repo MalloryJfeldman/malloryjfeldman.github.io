@@ -30,7 +30,7 @@ main#quarto-document-content { padding-top: 0 !important; margin-top: 0 !importa
 ::::::::: profile-wrap
 :::::::: profile-grid
 ::: frame-block
-<img src="images/profile-framed.jpg" alt="Portrait of Mallory J. Feldman, smiling outdoors in front of pine branches, in a decorative frame."/>
+<img src="images/profile.jpg" alt="Portrait of Mallory J. Feldman, smiling outdoors in front of pine branches."/>
 :::
 
 :::: {}
@@ -74,7 +74,7 @@ I am a psychologist studying how people **sense and make sense** of their bodies
 
 All day, every day, our brains are awash in sensations. These sensations come from familiar sources like our eyes and ears — but also from the tissues and systems within our bodies. The brain integrates information from these sources into ongoing experience, fundamentally shaping our perceptions of self and world.
 
-Increasingly, neuroscience shows that the brain does not passively read out sensory signals. Instead, it anticipates sensory events and compares predictions against incoming information. My work contributes to mounting evidence that the brain's predictions about the state of the body are not one input among many, but foundational to mental life, decision-making, and behavior.
+Increasingly, neuroscience shows that the brain does not passively read out sensory signals. Instead, it *anticipates* sensory events and compares predictions against incoming information. My work contributes to mounting evidence that the brain's predictions about the state of the body are not one input among many, but foundational to mental life, decision-making, and behavior.
 
 <cite><a href="https://doi.org/10.1016/j.tics.2024.01.009">[Read more:]{.cite-label}Feldman, Bliss-Moreau & Lindquist · Trends in Cognitive Sciences · 2024</a></cite>
 :::
@@ -98,9 +98,9 @@ Just as "vision" refers to the perception of light from outside the body, "inter
 :::
 
 ::: {}
-### Changing bodies, changing world
+### Changing bodies in a changing world
 
-The world is always changing around us: fueled by technological disruption, geopolitical turbulence, climate instability, and changing social norms. Our bodies also change. This unfolds slowly over time and can be described as "biological aging," but also in spurts and starts — as in puberty, pregnancy, or following acute illness or stress. I am interested in how our changing bodies contribute to human mental life, particularly given that times of major physiological change typically coincide with other kinds of psychological and social restructuring.
+The world is always changing around us fueled by technological disruption, geopolitical turbulence, climate instability, and changing social norms. Our bodies also change. This unfolds slowly over time, referred to as "biological aging," but also in spurts and starts — as in puberty, pregnancy, or following acute illness or stress. I am interested in how our changing bodies contribute to human mental life, particularly given that times of major physiological change typically coincide with other forms of psychological and social restructuring.
 
 <cite><a href="https://doi.org/10.1017/9781009209656.004">[Read more:]{.cite-label}MacCormack, Feldman, Bonar & Lindquist · Cambridge University Press · 2023</a></cite>
 :::

@@ -410,6 +410,67 @@ browsable(tags$div(keyword_dropdown, tags$div(groups)))
 
 ```
 
+::: {style="margin-top:1rem;"}
+## In Preparation & Under Review {style="font-family:var(--brand-font-display); font-weight:600; font-size:1.6rem; color:var(--brand-navy); border-top:1px solid var(--brand-line); padding-top:2.5rem; margin-bottom:0.25rem;"}
+
+<p style="color:var(--brand-ink-soft); font-size:0.95rem; margin:0 0 0.5rem;">The manuscripts below have not yet completed peer review.</p>
+:::
+
+<div class="year-group">
+<h3 class="year-title">Under Review</h3>
+<div class="pub-card">
+<div class="pub-card-title">Bodies, behaviors, and situations: A representational similarity analysis of emotion concept knowledge and its links to emotional granularity.</div>
+<div class="pub-card-meta">Feldman, M. J., MacCormack, J. K., &amp; Lindquist, K. A.<br><em>Under review at</em> <em>Emotion</em></div>
+</div>
+<div class="pub-card">
+<div class="pub-card-title">Social connection predicts higher emotional clarity: Evidence from an experience sampling study.</div>
+<div class="pub-card-meta">Feldman, M. J., Luo, J., Steele, C., Bonar, A., Tuck, A., Thompson, R., Lindquist, K., &amp; Inagaki, T.<br><em>Under review at</em> <em>Affective Science</em></div>
+</div>
+<div class="pub-card">
+<div class="pub-card-title">Testing dyadic similarity in social networks: A multiple membership modeling approach.</div>
+<div class="pub-card-meta">Feldman, M. J., Steinley, D., &amp; Bauer, D. J.<br><em>Under revision at</em> <em>Behavior Research Methods</em></div>
+</div>
+<div class="pub-card">
+<div class="pub-card-title">Ups and downs of blood pressure-related social algesia: A daily sampling study.</div>
+<div class="pub-card-meta">Inagaki, T. K., Steele, C. M., DeCataldo, M. K., Dembling, S. J., Bonar, A. S., Feldman, M. J., MacCormack, K. A., &amp; Ginaros, P. J.<br><em>Under review at</em> <em>Journal of Physiological Anthropology</em></div>
+</div>
+<div class="pub-card">
+<div class="pub-card-title">Does inflammation influence responses to unfair treatment?</div>
+<div class="pub-card-meta">Cardenas, M. N., Feldman, M. J., Antenucci, N. M., West, T. N., Jolink, T., Nakamura, Z. M., &amp; Muscatell, K. A.<br><em>Under review at</em> <em>Journal of Experimental Social Psychology</em></div>
+</div>
+<div class="pub-card">
+<div class="pub-card-title">Interoceptive accuracy, metacognition, and interpersonal trust perception across the adult lifespan.</div>
+<div class="pub-card-meta">Ma, R., Feldman, M. J., Bonar, A. S., Frye, N. G., Imamoglu, A., Giovanello, K. S., &amp; Lindquist, K. A.<br><em>Under revision at</em> <em>Affective Science</em></div>
+</div>
+<div class="pub-card">
+<div class="pub-card-title">Immune activity selectively disrupts interpersonal coordination during social interactions.</div>
+<div class="pub-card-meta">West, T. N., Jolink, T., Feldman, M. J., Antenucci, N. M., Cardenas, M. N., Nakamura, Z. M., Fredrickson, B. L., &amp; Muscatell, K. A.<br><em>Under review at</em> <em>Journal of Experimental Psychology: General</em></div>
+</div>
+<div class="pub-card">
+<div class="pub-card-title">Perceived neighborhood disadvantage predicts similarity in amygdala representations of negative and neutral images in early adolescents.</div>
+<div class="pub-card-meta">Bonar, A. S., Dai, J., Feldman, M. J., Capella, J., Prinstein, M. J., Telzer, E. H., &amp; Lindquist, K. A.<br><em>Under revision at</em> <em>Developmental Science</em></div>
+</div>
+<div class="pub-card">
+<div class="pub-card-title">Friendship dynamics and neural sensitivity to threats and rewards: Interactive impacts on adolescent loneliness.</div>
+<div class="pub-card-meta">Capella, J., Jorgensen, N., Feldman, M., Bonar, A., Field, N., Prinstein, M., Lindquist, K., &amp; Telzer, E. H.<br><em>Under review at</em> <em>Developmental Psychology</em></div>
+</div>
+</div>
+
+<div class="year-group">
+<h3 class="year-title">In Preparation</h3>
+<div class="pub-card">
+<div class="pub-card-title">The structure of affect and its relationship to interoceptive attention across the adult lifespan: An experience sampling study.</div>
+<div class="pub-card-meta">Feldman, M. J., Bonar, A. B., Escelante, Y., Gu, Y., Luo, J., Ma, R., Whitacre, K., Wulfekuhle, G., &amp; Lindquist, K. A.<br><em>Manuscript in preparation</em></div>
+</div>
+<div class="pub-card">
+<div class="pub-card-title">Probing the influence of interoceptive traits and bodily states on the use of incidental affect during social judgment.</div>
+<div class="pub-card-meta">Feldman, M. J., Bonar, A. B., Berman, C. J., Celeman, D., &amp; Lindquist, K. A.<br><em>Manuscript in preparation</em></div>
+</div>
+<div class="pub-card">
+<div class="pub-card-title">Interoception predicts the neural representation of self and other in adolescence.</div>
+<div class="pub-card-meta">Luo, J., Ma, R., Feldman, M. J., Flannery, J. S., Telzer, E. H., &amp; Lindquist, K. A.<br><em>Manuscript in preparation</em></div>
+</div>
+</div>
 
 ```{=html}
 <script>
